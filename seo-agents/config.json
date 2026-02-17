@@ -1,0 +1,168 @@
+{
+  "orchestrator": {
+    "name": "SEO_Orchestrator",
+    "description": "Main controller agent that coordinates all SEO activities across sub-agents",
+    "model": "gpt-4",
+    "temperature": 0.7,
+    "tools": [
+      "mcp_microsoft_pla_browser_navigate",
+      "mcp_microsoft_pla_browser_snapshot",
+      "mcp_microsoft_pla_browser_click",
+      "mcp_sequentialthi_sequentialthinking",
+      "mcp_memory_create_entities",
+      "mcp_memory_create_relations",
+      "mcp_memory_search_nodes",
+      "mcp_memory_read_graph",
+      "delegate_to_subagent"
+    ]
+  },
+  "subagents": {
+    "seo_specialist": {
+      "name": "SEO_Specialist",
+      "description": "Technical SEO expert for keyword research, on-page optimization, meta tags",
+      "model": "gpt-4",
+      "temperature": 0.5,
+      "expertise": [
+        "keyword_research",
+        "title_tag_optimization",
+        "meta_description_writing",
+        "h1_h2_structure",
+        "technical_seo_audit",
+        "serp_analysis"
+      ]
+    },
+    "content_strategist": {
+      "name": "Content_Strategist",
+      "description": "Blog and content expert for topic clusters, content calendars, TOFU/MOFU/BOFU",
+      "model": "gpt-4",
+      "temperature": 0.7,
+      "expertise": [
+        "topic_cluster_development",
+        "content_calendar_planning",
+        "blog_post_outlines",
+        "content_gap_analysis",
+        "semantic_content_mapping"
+      ]
+    },
+    "link_architect": {
+      "name": "Link_Architect",
+      "description": "Internal linking specialist for silo structures and anchor text optimization",
+      "model": "gpt-4",
+      "temperature": 0.5,
+      "expertise": [
+        "silo_structure_planning",
+        "internal_link_mapping",
+        "anchor_text_diversification",
+        "link_equity_distribution",
+        "orphan_page_identification"
+      ]
+    },
+    "blog_expert": {
+      "name": "Blog_Expert",
+      "description": "Blog content creation, optimization, and internal link placement specialist",
+      "model": "gpt-4",
+      "temperature": 0.7,
+      "expertise": [
+        "blog_post_planning",
+        "content_outline_generation",
+        "internal_link_placement",
+        "meta_optimization_blogs",
+        "content_calendar_execution",
+        "blog_seo_analysis"
+      ]
+    }
+  },
+  "memory_schema": {
+    "entities": ["SEOStrategy", "SEOPage", "LinkStrategy", "BlogPost", "Keyword"],
+    "relations": ["contains", "links_to", "targets_keyword", "supports", "belongs_to_silo"],
+    "observations": ["ranking_position", "traffic_estimate", "conversion_potential", "seo_score"]
+  },
+  "target_site": {
+    "domain": "erateapp.com",
+    "industry": "E-Rate Consulting",
+    "target_audience": ["school_administrators", "library_directors", "it_directors", "business_managers"],
+    "primary_competitors": ["usac.org", "e-ratecentral.com", "fundsforlearning.com"],
+    "pages": {
+      "core_pages": [
+        {
+          "url": "/",
+          "title": "E-Rate Consulting Services | 98% Approval",
+          "primary_keyword": "e-rate consulting services",
+          "silo": "hub"
+        },
+        {
+          "url": "/services/e-rate-application-management",
+          "title": "E-Rate Application Management | Full Service Filing",
+          "primary_keyword": "e-rate application management company",
+          "silo": "services"
+        },
+        {
+          "url": "/services/e-rate-appeals",
+          "title": "E-Rate Appeal Help | 90%+ Win Rate",
+          "primary_keyword": "e-rate appeal help",
+          "silo": "services"
+        },
+        {
+          "url": "/services/form-470-filing",
+          "title": "E-Rate Form 470 Filing Service | Expert Help",
+          "primary_keyword": "e-rate form 470 filing service",
+          "silo": "services"
+        },
+        {
+          "url": "/services/form-471-filing",
+          "title": "E-Rate Form 471 Help | Deadline Support",
+          "primary_keyword": "e-rate form 471 help",
+          "silo": "services"
+        },
+        {
+          "url": "/services/pia-review-support",
+          "title": "E-Rate PIA Review Preparation | Pass Your Review",
+          "primary_keyword": "e-rate pia review preparation",
+          "silo": "services"
+        }
+      ],
+      "audience_pages": [
+        {
+          "url": "/schools/",
+          "title": "E-Rate Funding for Schools | Up to 90% Discount",
+          "primary_keyword": "e-rate funding for schools",
+          "silo": "audience"
+        },
+        {
+          "url": "/libraries/",
+          "title": "E-Rate for Public Libraries | Funding Help",
+          "primary_keyword": "e-rate for public libraries",
+          "silo": "audience"
+        },
+        {
+          "url": "/charter-schools/",
+          "title": "E-Rate for Charter Schools | Eligibility Guide",
+          "primary_keyword": "e-rate for charter schools",
+          "silo": "audience"
+        }
+      ],
+      "resource_pages": [
+        {
+          "url": "/guides/what-is-e-rate/",
+          "title": "What is the E-Rate Program? | Complete Guide",
+          "primary_keyword": "what is e-rate program",
+          "silo": "resources"
+        },
+        {
+          "url": "/guides/e-rate-eligibility-calculator/",
+          "title": "Free E-Rate Discount Calculator | Check Rate",
+          "primary_keyword": "e-rate discount calculator",
+          "silo": "resources"
+        },
+        {
+          "url": "/guides/e-rate-deadlines-2026/",
+          "title": "E-Rate Deadlines 2026 | FY2026 Calendar",
+          "primary_keyword": "e-rate deadlines 2026",
+          "silo": "resources"
+        }
+      ]
+    }
+  },
+  "seo_strategy_version": "2026-02-16",
+  "last_updated": "2026-02-16T00:00:00Z"
+}

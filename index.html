@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Rate Consulting Services | 98% Approval Rate</title>
+    <meta name="description" content="Expert E-Rate consultants with 25+ years experience. 98% approval rate, $50M+ secured for schools & libraries. Form 470, 471 filing & appeals specialists.">
+    <meta name="keywords" content="E-Rate consulting, E-Rate application help, school technology funding, library funding, USAC E-Rate, Form 470, Form 471, E-Rate appeals, school internet funding, educational technology grants">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="E-Rate Consulting LLC">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://erateapp.com/">
+    <meta property="og:title" content="E-Rate Consulting | Maximize Your School's Technology Funding">
+    <meta property="og:description" content="Expert E-Rate consultants with 25+ years experience. 98% approval rate. Get up to 90% discount on internet, Wi-Fi, and network infrastructure.">
+    <meta property="og:image" content="https://erateapp.com/img/og-image.png">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="E-Rate Consulting | School Technology Funding Experts">
+    <meta name="twitter:description" content="Maximize E-Rate funding for your school or library. 25+ years experience, 98% approval rate.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://erateapp.com/">
+    
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "E-Rate Consulting LLC",
+        "description": "Expert E-Rate consulting services helping schools and libraries maximize their technology funding through the federal E-Rate program.",
+        "url": "https://erateapp.com",
+        "telephone": "+1-929-602-0910",
+        "email": "erateapp@erateconsulting.org",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US"
+        },
+        "areaServed": "United States",
+        "serviceType": ["E-Rate Consulting", "School Technology Funding", "Library Funding Assistance", "USAC Application Help", "E-Rate Appeals"],
+        "priceRange": "$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "127"
+        }
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the E-Rate program?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The E-Rate program provides discounts of 20-90% on telecommunications, internet access, and internal connections for eligible schools and libraries in the United States."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Who is eligible for E-Rate funding?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most K-12 schools (public and private) and libraries in the United States are eligible for E-Rate discounts based on the number of students eligible for the National School Lunch Program."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much E-Rate funding is available?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The E-Rate program has an annual funding cap of $4.456 billion. Schools can receive discounts ranging from 20% to 90% based on poverty levels."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Premium Loading Screen -->
+    <div id="loading-screen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #e3f2fd 0%, #1976d2 100%); z-index: 10000; display: flex; align-items: center; justify-content: center; transition: opacity 0.6s ease, visibility 0.6s ease;">
+        <div style="text-align: center;">
+            <div style="width: 60px; height: 60px; border: 4px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px;"></div>
+            <p style="color: white; font-size: 1.2rem; font-weight: 600; font-family: 'Playfair Display', Georgia, serif;">Loading Excellence...</p>
+        </div>
+    </div>
+    <style>
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+    
+    <!-- E-Rate Deadline Urgency Banner (Dynamic) -->
+    <div id="urgency-banner" style="background: linear-gradient(90deg, #c62828 0%, #d32f2f 50%, #c62828 100%); color: white; text-align: center; padding: 12px 20px; font-weight: 600; position: relative; z-index: 9999;">
+        <span style="margin-right: 8px;">?</span>
+        <span id="banner-text">Loading E-Rate deadlines...</span>
+        <a href="https://app.erateapp.com/signup" style="color: #ffeb3b; margin-left: 15px; text-decoration: underline;">Don't Miss Out ?</a>
+    </div>
+    <script>
+        // Dynamic E-Rate Funding Year Calculator
+        (function() {
+            const now = new Date();
+            const currentMonth = now.getMonth(); // 0-11
+            const currentYear = now.getFullYear();
+            
+            // E-Rate Funding Year Logic:
+            // - FY runs July 1 to June 30
+            // - Form 470 window: ~October-November (fall before FY)
+            // - Form 471 window: January-March (winter before FY starts)
+            // - If we're in Jan-June, we're filing for the current calendar year's FY
+            // - If we're in July-Dec, we're preparing for next calendar year's FY
+            
+            let fundingYear, phase, message;
+            
+            if (currentMonth >= 6) { // July-December
+                fundingYear = currentYear + 1;
+            } else { // January-June
+                fundingYear = currentYear;
+            }
+            
+            // Determine current phase and message
+            if (currentMonth >= 9 && currentMonth <= 11) { // Oct-Dec: Form 470 season
+                message = `FY${fundingYear} Form 470 Filing Open Now | Form 471 Deadline: March ${fundingYear}`;
+            } else if (currentMonth >= 0 && currentMonth <= 2) { // Jan-Mar: Form 471 season
+                message = `FY${fundingYear} Form 471 Filing Window Open | Deadline: March ${fundingYear}`;
+            } else if (currentMonth >= 3 && currentMonth <= 5) { // Apr-Jun: Post-filing
+                message = `FY${fundingYear} Applications Under Review | Start Preparing for FY${fundingYear + 1}`;
+            } else { // Jul-Sep: Early prep
+                message = `FY${fundingYear} E-Rate Season Starting Soon | Form 470 Opens Fall ${currentYear}`;
+            }
+            
+            document.getElementById('banner-text').textContent = message;
+        })();
+    </script>
+    
+    <header>
+        <nav class="container">
+            <div class="logo"><img src="logo.PNG" alt="E-Rate Consulting Logo"></div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="schools.html">Schools</a>
+                <a href="libraries.html">Libraries</a>
+                <a href="services/e-rate-appeals.html">Appeals</a>
+                <a href="#contact" class="cta-button">Contact</a>
+                <a href="https://app.erateapp.com/signup" class="cta-button">Get Started</a>
+            </div>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-image"><img src="img/hero-image.png" alt="Modern school technology"></div>
+            <h1>Stop Critical E-Rate Application Errors from Costing You Hundreds of Thousands in Funding</h1>
+            <p>Our platform is backed by certified E-Rate experts with over 30 years of experience. Since 1998, we have helped schools secure millions in E-Rate funding, ensuring you maximize your awards with minimal effort and zero risk. Stop sacrificing your weekends and start giving your students the technological resources they deserve.</p>
+            <a href="https://app.erateapp.com/signup" class="cta-button">Secure Your Funding Now</a>
+            <p class="hero-trust">Trusted by school and library administrators nationwide to secure their critical funding</p>
+        </div>
+    </section>
+    
+    <!-- Trust Statistics Section -->
+    <section class="stats-section" id="stats" style="background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%); padding: 60px 0; color: white;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: center;">
+                <div class="stat-item" style="padding: 20px;">
+                    <div style="font-size: 3.5rem; font-weight: 800; color: #4fc3f7; font-family: 'Playfair Display', serif;" data-count="50">$50M+</div>
+                    <div style="font-size: 1.1rem; margin-top: 10px; opacity: 0.9;">E-Rate Funding Secured</div>
+                </div>
+                <div class="stat-item" style="padding: 20px;">
+                    <div style="font-size: 3.5rem; font-weight: 800; color: #4fc3f7; font-family: 'Playfair Display', serif;">98%</div>
+                    <div style="font-size: 1.1rem; margin-top: 10px; opacity: 0.9;">Application Approval Rate</div>
+                </div>
+                <div class="stat-item" style="padding: 20px;">
+                    <div style="font-size: 3.5rem; font-weight: 800; color: #4fc3f7; font-family: 'Playfair Display', serif;">500+</div>
+                    <div style="font-size: 1.1rem; margin-top: 10px; opacity: 0.9;">Schools & Libraries Served</div>
+                </div>
+                <div class="stat-item" style="padding: 20px;">
+                    <div style="font-size: 3.5rem; font-weight: 800; color: #4fc3f7; font-family: 'Playfair Display', serif;">25+</div>
+                    <div style="font-size: 1.1rem; margin-top: 10px; opacity: 0.9;">Years of E-Rate Experience</div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px; font-size: 1rem; opacity: 0.85;">Helping schools access up to 90% discounts on internet, Wi-Fi, and network infrastructure through the federal E-Rate program</p>
+        </div>
+    </section>
+
+    <section class="section problem-section" id="problem">
+        <div class="container">
+            <h2 class="section-title">The Small Mistake Costing Rural Schools Dozens of Hours and Essential Funding Every Year</h2>
+            <p class="section-subtitle">Applying for E-Rate funding is a full-time job you're forced to do on top of your already demanding role. Every hour spent deciphering changing requirements and filling out complex paperwork is an hour taken directly from your students and staff. The result is an exhausting, uncertain process where a small mistake or a missed deadline can lead to rejection and the loss of hundreds of thousands of dollars in essential funding.</p>
+            <div class="problem-highlight">
+                <p>This resource gap isn't just a budget line; it directly translates into fewer educational opportunities for your students, preventing you from closing the digital divide with larger, wealthier schools.</p>
+            </div>
+            <div class="cta-center">
+                <a href="#solution" class="cta-button">I Want to Maximize My Funding</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">Introducing the Proven Methodology to Secure Full E-rate Funding, Without the Paperwork and Stress</h2>
+            <p class="section-subtitle">We've developed a unique hybrid system that combines the data-driven efficiency of our software platform with the unmatched experience of a certified E-Rate consultant. This isn't another DIY software that leaves you guessing. It's an end-to-end strategic solution designed to lift the entire burden from your shoulders and ensure your applications are done right from the start.</p>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-image"><img src="img/card-image.png" alt="Expert consultant"></div>
+                    <h3>Expert E-Rate Consultant (25+ Yrs Exp.)</h3>
+                    <p>Maximize your funding and prevent costly rejections with expert navigation of the E-Rate process. Our team includes certified E-Rate experts with over two decades of experience.</p>
+                </div>
+                <div class="card">
+                    <div class="card-image"><img src="img/card-image2.png" alt="School administrator paperwork"></div>
+                    <h3>Intuitive Software Platform</h3>
+                    <p>Reduce administrative time spent on applications by up to 80%, allowing you to focus on running your school.</p>
+                </div>
+                <div class="card">
+                    <div class="card-image"><img src="img/card-image3.png" alt="Digital transformation"></div>
+                    <h3>Automated Eligibility Engine</h3>
+                    <p>Uncover hidden funding opportunities and ensure you aren't leaving money on the table.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="services">
+        <div class="container">
+            <h2 class="section-title">Three Simple Steps to Turn the E-rate Process From a Headache Into a Certain Success</h2>
+            <p class="section-subtitle">We've broken down the complex process into a clear, transparent methodology designed to save you time and provide complete peace of mind at every stage.</p>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-image"><img src="img/card-image4.png" alt="Checklist process management"></div>
+                    <h3>Complete Application Management</h3>
+                    <p>We manage the entire E-Rate application process, from paperwork and documentation to deadlines and PIA reviews, so you can focus on what matters most.</p>
+                </div>
+                <div class="card">
+                    <div class="card-image"><img src="img/card-image5.png" alt="Legal document appeal"></div>
+                    <h3>Appeals & Funding Recovery</h3>
+                    <p>Denied funding? We specialize in USAC and FCC appeals, winning hundreds of cases and setting precedents.</p>
+                </div>
+                <div class="card">
+                    <div class="card-image"><img src="img/card-image6.png" alt="Vendor management"></div>
+                    <h3>Vendor Management</h3>
+                    <p>We help you select the best solutions and manage vendor relationships for your district’s needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Use a Consultant?</h2>
+            <p class="section-subtitle">Avoid costly mistakes, missed deadlines, and denied funding. Outsource your E-Rate process to certified experts with over 25 years of experience in securing and recovering funds.</p>
+            <ul class="benefits-list">
+                <li>Save time and eliminate paperwork</li>
+                <li>Expert guidance through PIA, selective reviews, and audits</li>
+                <li>Develop and win appeals to the SLD and FCC</li>
+                <li>Personalized service and support</li>
+                <li>Maximize your E-Rate funding with confidence</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Comparison Table: DIY vs E-Rate Consulting -->
+    <section class="section comparison-section" id="comparison" style="background: #f8f9fa; padding: 80px 0;">
+        <div class="container">
+            <h2 class="section-title">DIY E-Rate vs. Expert Consulting: The Real Cost Comparison</h2>
+            <p class="section-subtitle">See why hundreds of schools trust us to handle their E-Rate applications instead of going it alone.</p>
+            <div style="overflow-x: auto; margin-top: 40px;">
+                <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                    <thead>
+                        <tr style="background: linear-gradient(135deg, #1565c0, #0d47a1); color: white;">
+                            <th style="padding: 20px; text-align: left; font-size: 1.1rem;">Factor</th>
+                            <th style="padding: 20px; text-align: center; font-size: 1.1rem;">? DIY Approach</th>
+                            <th style="padding: 20px; text-align: center; font-size: 1.1rem; background: rgba(255,255,255,0.1);">? E-Rate Consulting</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 18px 20px; font-weight: 600;">Time Investment</td>
+                            <td style="padding: 18px 20px; text-align: center; color: #c62828;">80-120 hours/year</td>
+                            <td style="padding: 18px 20px; text-align: center; color: #2e7d32; background: #f1f8e9;">2-5 hours/year</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee; background: #fafafa;">
+                            <td style="padding: 18px 20px; font-weight: 600;">Approval Rate</td>
+                            <td style="padding: 18px 20px; text-align: center; color: #c62828;">~70% (with errors)</td>
+                            <td style="padding: 18px 20px; text-align: center; color: #2e7d32; background: #f1f8e9;">98%+ First-Time Approval</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 18px 20px; font-weight: 600;">PIA Review Support</td>
+                            <td style="padding: 18px 20px; text-align: center; color: #c62828;">You're on your own</td>
+                            <td style="padding: 18px 20px; text-align: center; color: #2e7d32; background: #f1f8e9;">Full expert guidance</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee; background: #fafafa;">
+                            <td style="padding: 18px 20px; font-weight: 600;">Appeal Success</td>
+                            <td style="padding: 18px 20px; text-align: center; color: #c62828;">Low (lack of precedent knowledge)</td>
+                            <td style="padding: 18px 20px; text-align: center; color: #2e7d32; background: #f1f8e9;">Hundreds of wins, precedent-setting</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 18px 20px; font-weight: 600;">Funding Maximization</td>
+                            <td style="padding: 18px 20px; text-align: center; color: #c62828;">Often leaves money on table</td>
+                            <td style="padding: 18px 20px; text-align: center; color: #2e7d32; background: #f1f8e9;">Every eligible dollar captured</td>
+                        </tr>
+                        <tr style="background: #e3f2fd;">
+                            <td style="padding: 18px 20px; font-weight: 600;">Risk of Denial</td>
+                            <td style="padding: 18px 20px; text-align: center; color: #c62828; font-weight: 600;">HIGH - One mistake = $0</td>
+                            <td style="padding: 18px 20px; text-align: center; color: #2e7d32; font-weight: 600; background: #c8e6c9;">MINIMAL - Expert protection</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#contact" class="cta-button" style="font-size: 1.1rem; padding: 18px 40px;">Get Expert Help Now ?</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories / Case Studies -->
+    <section class="section case-studies" id="case-studies" style="padding: 80px 0;">
+        <div class="container">
+            <h2 class="section-title">Real Schools. Real Results. Real Funding.</h2>
+            <p class="section-subtitle">See how we've transformed E-Rate outcomes for schools and libraries across the nation.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div style="background: white; border-radius: 16px; padding: 35px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border-left: 5px solid #4caf50;">
+                    <div style="font-size: 2.5rem; font-weight: 800; color: #4caf50; font-family: 'Playfair Display', serif;">$287,000</div>
+                    <div style="font-size: 1rem; color: #666; margin: 10px 0;">Funding Secured</div>
+                    <h4 style="font-size: 1.2rem; margin: 15px 0; color: #1a237e;">Charter School Network, PA</h4>
+                    <p style="color: #555; line-height: 1.6;">After being denied twice on their own, this charter network came to us. We identified application errors, filed a successful appeal, and secured their full Category 1 & 2 funding.</p>
+                    <div style="margin-top: 15px; font-size: 0.9rem; color: #888;">? 90% Discount Achieved</div>
+                </div>
+                <div style="background: white; border-radius: 16px; padding: 35px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border-left: 5px solid #2196f3;">
+                    <div style="font-size: 2.5rem; font-weight: 800; color: #2196f3; font-family: 'Playfair Display', serif;">$156,000</div>
+                    <div style="font-size: 1rem; color: #666; margin: 10px 0;">Annual Savings</div>
+                    <h4 style="font-size: 1.2rem; margin: 15px 0; color: #1a237e;">Private Day School, NY</h4>
+                    <p style="color: #555; line-height: 1.6;">This K-8 school was only claiming partial E-Rate benefits. Our eligibility audit uncovered additional services they qualified for, increasing their annual funding by 340%.</p>
+                    <div style="margin-top: 15px; font-size: 0.9rem; color: #888;">? Wi-Fi + Fiber Optic Funded</div>
+                </div>
+                <div style="background: white; border-radius: 16px; padding: 35px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border-left: 5px solid #ff9800;">
+                    <div style="font-size: 2.5rem; font-weight: 800; color: #ff9800; font-family: 'Playfair Display', serif;">$89,000</div>
+                    <div style="font-size: 1rem; color: #666; margin: 10px 0;">Appeal Recovery</div>
+                    <h4 style="font-size: 1.2rem; margin: 15px 0; color: #1a237e;">Public Library System, FL</h4>
+                    <p style="color: #555; line-height: 1.6;">Facing a complete denial due to a Form 471 technicality, we crafted a detailed appeal citing FCC precedents. Full funding was restored within 90 days.</p>
+                    <div style="margin-top: 15px; font-size: 0.9rem; color: #888;">? 100% Funding Restored</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="clients" id="clients">
+        <div class="container">
+            <h2 class="clients-title">Institutions We’ve Helped</h2>
+            <div class="clients-list">
+                <div class="client-card"><div class="client-card-logo"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle fill='%234a90e2' cx='50' cy='50' r='50'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" alt="ASHAR"></div><div class="client-card-text">ASHAR, New City, NY</div></div>
+                <div class="client-card"><div class="client-card-logo"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%2367b26f' width='100' height='100' rx='15'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E" alt="Brandeis"></div><div class="client-card-text">Brandeis, Cedarhurst, NY</div></div>
+                <div class="client-card"><div class="client-card-logo"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle fill='%23e74c3c' cx='50' cy='50' r='50'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" alt="Children's Home"></div><div class="client-card-text">Children's Home Kingston Grove, Kingston, NY</div></div>
+                <div class="client-card"><div class="client-card-logo"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23f39c12' width='100' height='100' rx='15'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" alt="Cypress Hills"></div><div class="client-card-text">Cypress Hills Day Care, Brooklyn, NY</div></div>
+                <div class="client-card"><div class="client-card-logo"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle fill='%239b59b6' cx='50' cy='50' r='50'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" alt="Daughters of Zion"></div><div class="client-card-text">Daughters of Zion SDA, Delray Beach, FL</div></div>
+                <div class="client-card"><div class="client-card-logo"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%2316a085' width='100' height='100' rx='15'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" alt="DDI"></div><div class="client-card-text">Developmental Disabilities Institute, Smithtown, NY</div></div>
+                <div class="client-card"><div class="client-card-logo"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle fill='%23e67e22' cx='50' cy='50' r='50'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" alt="Erie Rise"></div><div class="client-card-text">Erie Rise Leadership Charter School, Erie, PA</div></div>
+                <div class="client-card"><div class="client-card-logo"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23c0392b' width='100' height='100' rx='15'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E" alt="HAFTR"></div><div class="client-card-text">HAFTR, Lawrence, NY</div></div>
+                <div class="client-card"><div class="client-card-logo"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle fill='%233498db' cx='50' cy='50' r='50'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" alt="Manhattan HS"></div><div class="client-card-text">Manhattan High School, NY, NY</div></div>
+                <div class="client-card"><div class="client-card-logo"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%2327ae60' width='100' height='100' rx='15'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E" alt="NTCA"></div><div class="client-card-text">North Tampa Christian Academy, FL</div></div>
+                <div class="client-card"><div class="client-card-logo"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle fill='%232c3e50' cx='50' cy='50' r='50'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E" alt="Rambam"></div><div class="client-card-text">Rambam, Lawrence, NY</div></div>
+                <div class="client-card"><div class="client-card-logo"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%2334495e' width='100' height='100' rx='15'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" alt="SAR"></div><div class="client-card-text">SAR, Riverdale, NY</div></div>
+                <div class="client-card"><div class="client-card-logo"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle fill='%238e44ad' cx='50' cy='50' r='50'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" alt="Solomon Schechter"></div><div class="client-card-text">Solomon Schechter of Queens, NY</div></div>
+                <div class="client-card"><div class="client-card-logo"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23d35400' width='100' height='100' rx='15'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" alt="St. Raymond"></div><div class="client-card-text">St. Raymond Academy H.S., Bronx NY</div></div>
+                <div class="client-card"><div class="client-card-logo"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle fill='%231abc9c' cx='50' cy='50' r='50'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E" alt="Williamsburg Charter"></div><div class="client-card-text">Williamsburg Charter H.S. NY</div></div>
+                <!-- Add more as needed -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certification & Trust Badges -->
+    <section class="section trust-badges" id="credentials" style="background: #f8f9fa; padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title" style="margin-bottom: 15px;">Certified. Trusted. Proven.</h2>
+            <p class="section-subtitle">Our credentials and partnerships ensure you get the best E-Rate expertise available.</p>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 50px; margin-top: 40px;">
+                <div style="text-align: center; padding: 25px;">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #1976d2, #0d47a1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 8px 25px rgba(25,118,210,0.3);">
+                        <span style="font-size: 2rem; color: white;">??</span>
+                    </div>
+                    <div style="font-weight: 700; color: #1a237e; font-size: 1rem;">EMPA Member</div>
+                    <div style="font-size: 0.85rem; color: #666; margin-top: 5px;">E-Rate Management<br>Professionals Association</div>
+                </div>
+                <div style="text-align: center; padding: 25px;">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #2e7d32, #1b5e20); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 8px 25px rgba(46,125,50,0.3);">
+                        <span style="font-size: 2rem; color: white;">?</span>
+                    </div>
+                    <div style="font-weight: 700; color: #1a237e; font-size: 1rem;">USAC Certified</div>
+                    <div style="font-size: 0.85rem; color: #666; margin-top: 5px;">Universal Service<br>Administrative Company</div>
+                </div>
+                <div style="text-align: center; padding: 25px;">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #c62828, #b71c1c); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 8px 25px rgba(198,40,40,0.3);">
+                        <span style="font-size: 2rem; color: white;">??</span>
+                    </div>
+                    <div style="font-weight: 700; color: #1a237e; font-size: 1rem;">NYS SDA Certified</div>
+                    <div style="font-size: 0.85rem; color: #666; margin-top: 5px;">School District<br>Administrator</div>
+                </div>
+                <div style="text-align: center; padding: 25px;">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #f57c00, #e65100); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 8px 25px rgba(245,124,0,0.3);">
+                        <span style="font-size: 2rem; color: white;">??</span>
+                    </div>
+                    <div style="font-weight: 700; color: #1a237e; font-size: 1rem;">25+ Years</div>
+                    <div style="font-size: 0.85rem; color: #666; margin-top: 5px;">Industry<br>Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="testimonials-title">What Our Clients Say</h2>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <div class="testimonial-image"><img src="img/testimonial-image.png" alt="Happy school administrator"></div>
+                    <div class="testimonial-quote">“Your insights on the appeal were brilliant—we got funded.”<br><span>- R.V., Mount St Michael</span></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-image"><img src="img/testimonial-image2.png" alt="Smiling teacher"></div>
+                    <div class="testimonial-quote">“With you I know I can sleep at night.”<br><span>- R.E., Staten Island</span></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-image"><img src="img/testimonial-image3.png" alt="School principal"></div>
+                    <div class="testimonial-quote">“I would recommend you to anyone.”<br><span>- V.D., Miraj</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Guarantee Section -->
+    <section class="guarantee-section" style="background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%); padding: 60px 0; color: white; text-align: center;">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+                    <span style="font-size: 3rem;">???</span>
+                </div>
+                <h2 style="font-size: 2.2rem; margin-bottom: 20px; font-family: 'Playfair Display', serif;">Our E-Rate Success Guarantee</h2>
+                <p style="font-size: 1.2rem; line-height: 1.8; opacity: 0.95;">We're so confident in our expertise that we offer a <strong>simple guarantee</strong>: If your properly submitted E-Rate application is denied due to an error on our part, we'll handle the appeal process at <strong>no additional cost</strong>. That's how much we believe in doing applications right from the start.</p>
+                <div style="margin-top: 30px; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 1.5rem;">?</span>
+                        <span>98% Approval Rate</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 1.5rem;">?</span>
+                        <span>Free Appeal Support</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 1.5rem;">?</span>
+                        <span>No Hidden Fees</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Are You Ready to Make the Next School Year a Record Year for Technology Funding?</h2>
+            <p>Stop leaving money on the table and sacrificing your personal time. It's time to stop hoping for the best and start acting with a proven strategy. Schedule a short, no-obligation consultation call and discover how much funding you can receive with our experts and technology.</p>
+            <div class="contact-info">
+                <div>Email: <a href="mailto:erateapp@erateconsulting.org" style="color:#ffffff;">erateapp@erateconsulting.org</a></div>
+                <div>Phone: <a href="tel:929-602-0910" style="color:#ffffff;">929-602-0910</a></div>
+            </div>
+            <form class="contact-form" id="lead-form">
+                <div class="form-field">
+                    <label for="full_name">Full Name</label>
+                    <input type="text" id="full_name" name="full_name" required>
+                </div>
+                <div class="form-field">
+                    <label for="work_email">Work Email</label>
+                    <input type="email" id="work_email" name="work_email" required>
+                </div>
+                <div class="form-field">
+                    <label for="organization_name">Organization Name</label>
+                    <input type="text" id="organization_name" name="organization_name">
+                </div>
+                <div class="form-field">
+                    <label for="job_title">Job Title</label>
+                    <input type="text" id="job_title" name="job_title">
+                </div>
+                <div class="form-field">
+                    <label for="student_count">Number of Students / Library Patrons</label>
+                    <input type="number" id="student_count" name="student_count">
+                </div>
+                <div class="form-field">
+                    <label for="phone_number">Phone Number</label>
+                    <input type="tel" id="phone_number" name="phone_number">
+                </div>
+                <div class="form-field">
+                    <button type="submit">Request a Demo</button>
+                </div>
+                <p class="form-privacy">Your information is 100% secure and will never be shared.</p>
+            </form>
+        </div>
+    </section>
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions About E-Rate</h2>
+            <p class="section-subtitle" style="margin-bottom: 40px;">Everything you need to know about the E-Rate program and how we can help maximize your funding.</p>
+            <div class="faq-item">
+                <h4>What is the E-Rate program and how much funding is available?</h4>
+                <p>The E-Rate program (Schools and Libraries Program) is a federal program with <strong>$4.456 billion in annual funding</strong> that provides discounts of 20-90% to help schools and libraries obtain affordable telecommunications, internet access, and network infrastructure. It's administered by USAC under FCC oversight.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Who is eligible for E-Rate funding?</h4>
+                <p>Most K-12 schools (public, private, and charter), libraries, and consortia in the United States are eligible. Discount levels are based on the percentage of students eligible for the National School Lunch Program (NSLP) and whether the school is in a rural area. Discounts range from 20% to 90%.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What services and equipment are covered by E-Rate?</h4>
+                <p><strong>Category 1</strong> covers internet access and data transmission services (fiber optics, broadband, leased lit fiber). <strong>Category 2</strong> covers internal connections including Wi-Fi equipment, network switches, routers, cabling, and basic maintenance. Category 2 has a budget cap based on student population.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What are the E-Rate application deadlines for FY2026?</h4>
+                <p>The E-Rate process follows a strict timeline: <strong>Form 470</strong> (competitive bidding) must be posted at least 28 days before selecting a vendor. The <strong>Form 471 filing window</strong> typically opens in January and closes in March. Missing these deadlines means losing an entire year of funding.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What is Form 470 and Form 471?</h4>
+                <p><strong>Form 470</strong> initiates the competitive bidding process by posting your service needs publicly for vendors to respond. <strong>Form 471</strong> is your actual funding application that details the services you've selected and requests E-Rate discounts. Both forms are critical and must be completed accurately.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What happens during PIA (Program Integrity Assurance) review?</h4>
+                <p>USAC reviewers examine your application for compliance with E-Rate rules. They may request additional documentation, clarification, or corrections. <strong>Responding incorrectly to PIA questions is one of the top reasons for funding denials.</strong> Our experts handle all PIA interactions to protect your funding.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What if my E-Rate application is denied?</h4>
+                <p>You have the right to appeal denials to USAC and the FCC. Our team specializes in E-Rate appeals, having won hundreds of cases and set legal precedents. Many denials can be successfully appealed with proper documentation and legal arguments. Time limits apply, so act quickly.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Why do I need an E-Rate consultant instead of doing it myself?</h4>
+                <p>The E-Rate application process is complex, with changing rules and strict compliance requirements. <strong>DIY applicants have approximately 70% approval rates</strong> compared to our 98%+ rate. A single mistake can result in complete denial and loss of hundreds of thousands of dollars. Our expertise ensures maximum funding with minimal risk.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How much does E-Rate consulting cost?</h4>
+                <p>Our fees are typically a small percentage of the funding secured—meaning we only succeed when you succeed. For most schools, the cost of our services is far outweighed by the additional funding we help secure and the time saved. Contact us for a free consultation and custom quote.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How do I get started with E-Rate Consulting?</h4>
+                <p>Simply <a href="#contact" style="color: #1976d2; font-weight: 600;">request a free consultation</a> using the form above. We'll review your current situation, identify funding opportunities, and create a customized plan to maximize your E-Rate benefits. There's no obligation—just expert advice to help your school or library.</p>
+            </div>
+        </div>
+    </section>
+    <footer style="background: #0d1b2a; padding: 60px 0 30px;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <h4 style="color: white; font-size: 1.3rem; margin-bottom: 20px; font-family: 'Playfair Display', serif;">E-Rate Consulting</h4>
+                    <p style="color: #8892a0; line-height: 1.8; font-size: 0.95rem;">Expert E-Rate consulting services helping K-12 schools, charter schools, and libraries maximize their technology funding through the federal E-Rate program.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="mailto:erateapp@erateconsulting.org" style="color: #4fc3f7; text-decoration: none;">erateapp@erateconsulting.org</a><br>
+                        <a href="tel:929-602-0910" style="color: #4fc3f7; text-decoration: none;">929-602-0910</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: white; font-size: 1.1rem; margin-bottom: 20px;">Our Services</h4>
+                    <ul style="list-style: none; padding: 0; color: #8892a0; line-height: 2;">
+                        <li><a href="services/form-470-filing.html" style="color: #8892a0; text-decoration: none;">Form 470 Filing</a></li>
+                        <li><a href="services/form-471-filing.html" style="color: #8892a0; text-decoration: none;">Form 471 Application</a></li>
+                        <li><a href="services/pia-review-support.html" style="color: #8892a0; text-decoration: none;">PIA Review Support</a></li>
+                        <li><a href="services/e-rate-appeals.html" style="color: #8892a0; text-decoration: none;">E-Rate Appeals</a></li>
+                        <li><a href="#services" style="color: #8892a0; text-decoration: none;">Vendor Management</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; font-size: 1.1rem; margin-bottom: 20px;">E-Rate Resources</h4>
+                    <ul style="list-style: none; padding: 0; color: #8892a0; line-height: 2;">
+                        <li><a href="guides/what-is-e-rate.html" style="color: #8892a0; text-decoration: none;">What is E-Rate?</a></li>
+                        <li><a href="guides/e-rate-deadlines-2026.html" style="color: #8892a0; text-decoration: none;">2026 Deadlines</a></li>
+                        <li><a href="blog/10-common-e-rate-mistakes.html" style="color: #8892a0; text-decoration: none;">Common Mistakes</a></li>
+                        <li><a href="#faq" style="color: #8892a0; text-decoration: none;">E-Rate FAQ</a></li>
+                        <li><a href="#contact" style="color: #8892a0; text-decoration: none;">Free Consultation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; font-size: 1.1rem; margin-bottom: 20px;">Who We Serve</h4>
+                    <ul style="list-style: none; padding: 0; color: #8892a0; line-height: 2;">
+                        <li><a href="schools.html" style="color: #8892a0; text-decoration: none;">Public Schools</a></li>
+                        <li><a href="schools.html" style="color: #8892a0; text-decoration: none;">Private Schools</a></li>
+                        <li><a href="charter-schools.html" style="color: #8892a0; text-decoration: none;">Charter Schools</a></li>
+                        <li><a href="libraries.html" style="color: #8892a0; text-decoration: none;">Public Libraries</a></li>
+                        <li><a href="schools.html" style="color: #8892a0; text-decoration: none;">School Districts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #1f3044; padding-top: 25px; text-align: center;">
+                <p style="color: #8892a0; font-size: 0.9rem;">&copy; 2026 E-Rate Consulting LLC. All rights reserved. | Serving schools and libraries nationwide since 1998</p>
+                <p style="color: #5a6a7a; font-size: 0.8rem; margin-top: 10px;">E-Rate Consulting is not affiliated with USAC or the FCC. We are an independent consulting firm specializing in E-Rate applications.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/19296020910" class="whatsapp-floater" target="_blank">
+        <img src="img/whatsapp-icon.svg" alt="WhatsApp">
+    </a>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced scroll effect for header with glassmorphism
+        let lastScroll = 0;
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const currentScroll = window.scrollY;
+            
+            if (currentScroll > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Scroll reveal animation with Intersection Observer
+        const revealElements = document.querySelectorAll('.card, .testimonial-card, .client-card, .faq-item, .section-title, .section-subtitle');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Initialize elements for reveal animation
+        revealElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            revealObserver.observe(el);
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                const heroImage = hero.querySelector('.hero-image');
+                if (heroImage) {
+                    heroImage.style.transform = `translateY(${scrolled * 0.3}px)`;
+                }
+            }
+        });
+
+        // Add smooth hover effect to buttons
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('mouseenter', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                this.style.setProperty('--x', x + 'px');
+                this.style.setProperty('--y', y + 'px');
+            });
+        });
+
+        // Form input animations
+        document.querySelectorAll('.contact-form input').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.parentElement.classList.remove('focused');
+                }
+            });
+        });
+
+        // Add ripple effect to cards
+        document.querySelectorAll('.card, .testimonial-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Smooth number counter animation (if you want to add stats)
+        function animateValue(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                element.textContent = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Add loading animation (page enters smoothly)
+        window.addEventListener('DOMContentLoaded', () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            
+            // Hide loading screen after DOM loads (faster)
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                loadingScreen.style.visibility = 'hidden';
+                
+                // Trigger staggered fade-in for hero elements
+                const heroElements = document.querySelectorAll('.hero h1, .hero p, .hero .cta-button, .hero-trust');
+                heroElements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }, index * 150);
+                });
+            }, 300);
+        });
+
+        // Initialize hero elements for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroElements = document.querySelectorAll('.hero h1, .hero p, .hero .cta-button, .hero-trust');
+            heroElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            });
+        });
+
+        // Tilt effect for cards on mouse move
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mousemove', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px) scale(1.03)`;
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

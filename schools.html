@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Rate Funding for Schools | Up to 90% Discount</title>
+    <meta name="description" content="Get up to 90% off internet, Wi-Fi, and network infrastructure for your K-12 school. Expert E-Rate consultants help maximize funding with 98% approval rate.">
+    <meta name="keywords" content="E-Rate for schools, school technology funding, K-12 E-Rate, school internet funding, school Wi-Fi funding, E-Rate eligibility schools, educational technology grants">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://erateapp.com/schools.html">
+    <meta property="og:title" content="E-Rate Funding for Schools | Up to 90% Off Technology">
+    <meta property="og:description" content="Get up to 90% discount on internet, Wi-Fi, and network infrastructure for your school through the federal E-Rate program.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://erateapp.com/schools.html">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "E-Rate Funding for Schools",
+        "description": "Expert E-Rate consulting services helping K-12 schools maximize their technology funding through the federal E-Rate program.",
+        "url": "https://erateapp.com/schools.html",
+        "provider": {
+            "@type": "Organization",
+            "name": "E-Rate Consulting LLC"
+        }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-alt: #f3f4f6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        .nav {
+            background: var(--bg);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #065f46 0%, #10b981 100%);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .hero h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 700px;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Discount Calculator Preview */
+        .discount-preview {
+            background: white;
+            color: var(--text);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            max-width: 500px;
+        }
+        
+        .discount-preview h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .discount-range {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .discount-value {
+            text-align: center;
+        }
+        
+        .discount-value .number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--success);
+        }
+        
+        .discount-value .label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        
+        /* Content Sections */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-alt {
+            background: var(--bg-alt);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 700px;
+        }
+        
+        /* Eligibility Grid */
+        .eligibility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .eligibility-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .eligibility-card h3 {
+            font-size: 1.25rem;
+            margin: 1rem 0;
+            color: var(--text);
+        }
+        
+        .eligibility-card p {
+            color: var(--text-light);
+        }
+        
+        .eligibility-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto;
+            background: var(--bg-alt);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        
+        /* Category Comparison */
+        .category-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .category-table th {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+        
+        .category-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--bg-alt);
+        }
+        
+        .category-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* Service Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary);
+        }
+        
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        
+        .service-card a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .service-card a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, #065f46 0%, #10b981 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta .btn-primary {
+            background: white;
+            color: #065f46;
+        }
+        
+        .cta .btn-primary:hover {
+            background: #f3f4f6;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer a {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+        
+        /* Internal Links */
+        .internal-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .internal-link {
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-alt);
+            border-radius: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        
+        .internal-link:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .discount-range {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-content">
+            <a href="index.html" class="nav-logo">E-Rate Consulting</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schools.html" class="active">Schools</a></li>
+                <li><a href="libraries.html">Libraries</a></li>
+                <li><a href="services/e-rate-appeals.html">Appeals</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <a href="https://app.erateapp.com/signup" class="btn btn-primary">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">🏫 For K-12 Public & Private Schools</div>
+            <h1>Get Up to 90% Off Internet, Wi-Fi, and Network Infrastructure for Your School</h1>
+            <p>The E-Rate program provides discounts of 20-90% on eligible technology services for K-12 schools. Our expert consultants have helped 500+ schools secure over $50 million in funding with a 98% approval rate.</p>
+            <div>
+                <a href="https://app.erateapp.com/signup" class="btn btn-primary">Check Your Eligibility →</a>
+                <a href="index.html#contact" class="btn btn-secondary" style="margin-left: 1rem;">Free Consultation</a>
+            </div>
+            
+            <div class="discount-preview">
+                <h3>E-Rate Discount Ranges by School Type</h3>
+                <div class="discount-range">
+                    <div class="discount-value">
+                        <div class="number">90%</div>
+                        <div class="label">High-Poverty Schools</div>
+                    </div>
+                    <div class="discount-value">
+                        <div class="number">40-80%</div>
+                        <div class="label">Most Schools</div>
+                    </div>
+                    <div class="discount-value">
+                        <div class="number">20%</div>
+                        <div class="label">Minimum Discount</div>
+                    </div>
+                </div>
+                <p style="font-size: 0.9rem; color: var(--text-light);">Discount based on free/reduced lunch eligibility percentage</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div>
+                    <div class="stat-number">$50M+</div>
+                    <div class="stat-label">Funding Secured</div>
+                </div>
+                <div>
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Schools Served</div>
+                </div>
+                <div>
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Approval Rate</div>
+                </div>
+                <div>
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eligible Schools -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Which Schools Are Eligible for E-Rate?</h2>
+            <p class="section-subtitle">Most K-12 schools qualify for E-Rate funding. Here's a quick overview of eligible institution types:</p>
+            
+            <div class="eligibility-grid">
+                <div class="eligibility-card">
+                    <div class="eligibility-icon">🏫</div>
+                    <h3>Public Schools</h3>
+                    <p>All public K-12 schools, including charter schools that are part of the public school system.</p>
+                </div>
+                <div class="eligibility-card">
+                    <div class="eligibility-icon">✝️</div>
+                    <h3>Private Schools</h3>
+                    <p>Non-profit private schools with 501(c)(3) status, including religious and parochial schools.</p>
+                </div>
+                <div class="eligibility-card">
+                    <div class="eligibility-icon">🎓</div>
+                    <h3>Charter Schools</h3>
+                    <p>Both public and non-profit charter schools are eligible. <a href="charter-schools.html">Learn more about charter school eligibility</a>.</p>
+                </div>
+                <div class="eligibility-card">
+                    <div class="eligibility-icon">🏠</div>
+                    <h3>School Districts</h3>
+                    <p>Districts can apply on behalf of all schools in their system, simplifying the application process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category 1 vs Category 2 -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">What Technology Does E-Rate Cover?</h2>
+            <p class="section-subtitle">E-Rate covers two categories of services. Understanding the difference helps maximize your funding.</p>
+            
+            <table class="category-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>What's Covered</th>
+                        <th>Discount</th>
+                        <th>Funding Limits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Category 1</strong><br>Connectivity</td>
+                        <td>Internet access, data transmission, telephone service, fiber optic connections</td>
+                        <td>20-90%</td>
+                        <td>No per-student cap</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Category 2</strong><br>Internal Connections</td>
+                        <td>Wi-Fi equipment, switches, routers, cabling, firewalls, UPS, racks</td>
+                        <td>20-85%</td>
+                        <td>$167/student over 5 years</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p style="margin-top: 1.5rem; color: var(--text-light);">
+                <strong>Pro Tip:</strong> Many schools focus only on Category 1 and miss Category 2 opportunities. 
+                <a href="guides/what-is-e-rate.html" style="color: var(--primary);">Learn about the E-Rate program →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Services for Schools -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">How We Help Schools Maximize E-Rate Funding</h2>
+            <p class="section-subtitle">From application to approval, we handle every step of the E-Rate process so you can focus on education.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Complete Application Management</h3>
+                    <p>We handle Forms 470 and 471, competitive bidding, documentation, and all compliance requirements.</p>
+                    <a href="services/form-471-filing.html">Form 471 Filing Assistance →</a>
+                </div>
+                <div class="service-card">
+                    <h3>PIA Review Support</h3>
+                    <p>When USAC has questions, we prepare thorough responses that satisfy reviewers and keep your funding on track.</p>
+                    <a href="services/pia-review-support.html">PIA Review Help →</a>
+                </div>
+                <div class="service-card">
+                    <h3>Appeals & Funding Recovery</h3>
+                    <p>If your application was denied, our 90%+ appeal success rate means we can likely recover your funding.</p>
+                    <a href="services/e-rate-appeals.html">Appeal Denied Funding →</a>
+                </div>
+                <div class="service-card">
+                    <h3>Technology Planning</h3>
+                    <p>We help you develop a technology plan that qualifies for E-Rate and meets your educational goals.</p>
+                    <a href="index.html#contact">Request Consultation →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">FY2026 E-Rate Timeline for Schools</h2>
+            <p class="section-subtitle">Key deadlines you need to know for the current funding year.</p>
+            
+            <div class="eligibility-grid">
+                <div class="eligibility-card" style="border-left: 4px solid var(--warning);">
+                    <h3>Form 470 Filing</h3>
+                    <p><strong>Opens:</strong> July 2025</p>
+                    <p>Post your competitive bidding request at least 28 days before selecting a vendor.</p>
+                </div>
+                <div class="eligibility-card" style="border-left: 4px solid var(--primary);">
+                    <h3>Form 471 Window</h3>
+                    <p><strong>Opens:</strong> January 2026</p>
+                    <p><strong>Closes:</strong> March 2026</p>
+                    <p>Submit your funding application during this window.</p>
+                </div>
+                <div class="eligibility-card" style="border-left: 4px solid var(--success);">
+                    <h3>Funding Year</h3>
+                    <p><strong>Starts:</strong> July 1, 2026</p>
+                    <p>Services can begin and invoicing period opens.</p>
+                </div>
+            </div>
+            
+            <p style="margin-top: 2rem; text-align: center;">
+                <a href="guides/e-rate-deadlines-2026.html" class="btn btn-primary">View Complete 2026 Deadline Calendar →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Maximize Your School's E-Rate Funding?</h2>
+            <p>Join 500+ schools that trust us to handle their E-Rate applications. Get started with a free eligibility assessment.</p>
+            <a href="https://app.erateapp.com/signup" class="btn btn-primary">Get Free Eligibility Check →</a>
+        </div>
+    </section>
+
+    <!-- Related Pages -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Learn More About E-Rate</h2>
+            <div class="internal-links">
+                <a href="guides/what-is-e-rate.html" class="internal-link">What is E-Rate? →</a>
+                <a href="guides/e-rate-deadlines-2026.html" class="internal-link">2026 E-Rate Deadlines →</a>
+                <a href="services/e-rate-appeals.html" class="internal-link">E-Rate Appeal Help →</a>
+                <a href="libraries.html" class="internal-link">E-Rate for Libraries →</a>
+                <a href="charter-schools.html" class="internal-link">E-Rate for Charter Schools →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 E-Rate Consulting LLC. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">
+                <a href="index.html">Home</a> | 
+                <a href="schools.html">Schools</a> | 
+                <a href="libraries.html">Libraries</a> |
+                <a href="services/e-rate-appeals.html">Appeals</a> |
+                <a href="index.html#contact">Contact</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+# Root repo ignore rules (keeps `git status` clean)
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments / local installs
+.venv/
+venv/
+erate/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node / frontend
+**/node_modules/
+**/.next/
+**/dist/
+**/build/
+**/.turbo/
+**/.vite/
+
+# Local secrets
+.env
+
+# Playwright MCP artifacts (screenshots/state)
+.playwright-mcp/
+
+# Local caches / scraped data
+/data/cache/
+
+# Local DBs (NOTE: tracked DBs are not affected by ignore rules)
+*.db
+*.sqlite
+
+# Reports / generated outputs
+*.log
+reports/

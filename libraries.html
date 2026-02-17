@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Rate for Public Libraries | Broadband Funding Help</title>
+    <meta name="description" content="Get up to 90% off internet and Wi-Fi for your library through E-Rate. Expert consultants help public libraries maximize technology funding with 98% approval rate.">
+    <meta name="keywords" content="E-Rate for libraries, library broadband funding, library E-Rate application, public library technology funding, library internet funding, E-Rate eligibility libraries">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://erateapp.com/libraries.html">
+    <meta property="og:title" content="E-Rate for Public Libraries | Technology Funding">
+    <meta property="og:description" content="Get up to 90% discount on internet and Wi-Fi for your library through the federal E-Rate program.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://erateapp.com/libraries.html">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "E-Rate for Public Libraries",
+        "description": "Expert E-Rate consulting services helping public libraries maximize their technology funding through the federal E-Rate program.",
+        "url": "https://erateapp.com/libraries.html",
+        "provider": {
+            "@type": "Organization",
+            "name": "E-Rate Consulting LLC"
+        }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --accent: #7c3aed;
+            --accent-dark: #6d28d9;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-alt: #f3f4f6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        .nav {
+            background: var(--bg);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-dark);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .hero h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 700px;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Feature Boxes */
+        .feature-boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-box {
+            background: rgba(255,255,255,0.15);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .feature-box-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-box h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .feature-box p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+        
+        /* Content Sections */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-alt {
+            background: var(--bg-alt);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 700px;
+        }
+        
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        
+        .card p {
+            color: var(--text-light);
+        }
+        
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--accent);
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .comparison-table th {
+            background: var(--accent);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+        
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--bg-alt);
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* Testimonial */
+        .testimonial {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial blockquote {
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial cite {
+            color: var(--text-light);
+            font-style: normal;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta .btn-primary {
+            background: white;
+            color: var(--accent);
+        }
+        
+        .cta .btn-primary:hover {
+            background: #f3f4f6;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer a {
+            color: #c4b5fd;
+            text-decoration: none;
+        }
+        
+        /* Internal Links */
+        .internal-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .internal-link {
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-alt);
+            border-radius: 8px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        
+        .internal-link:hover {
+            background: var(--accent);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .feature-boxes {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-content">
+            <a href="index.html" class="nav-logo">E-Rate Consulting</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schools.html">Schools</a></li>
+                <li><a href="libraries.html" class="active">Libraries</a></li>
+                <li><a href="services/e-rate-appeals.html">Appeals</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <a href="https://app.erateapp.com/signup" class="btn btn-primary">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">📚 For Public Library Systems</div>
+            <h1>Maximize Your Library's Technology Budget with E-Rate Funding</h1>
+            <p>Public libraries qualify for E-Rate discounts of 20-90% on internet, Wi-Fi, and network infrastructure. Our expert consultants handle the complex application process so you can focus on serving your community.</p>
+            <div>
+                <a href="https://app.erateapp.com/signup" class="btn btn-primary">Check Your Eligibility →</a>
+                <a href="index.html#contact" class="btn btn-secondary" style="margin-left: 1rem;">Free Consultation</a>
+            </div>
+            
+            <div class="feature-boxes">
+                <div class="feature-box">
+                    <div class="feature-box-icon">💰</div>
+                    <h4>Up to 90% Off</h4>
+                    <p>Based on poverty levels</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-box-icon">📶</div>
+                    <h4>Wi-Fi Coverage</h4>
+                    <p>Category 2 eligible</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-box-icon">🌐</div>
+                    <h4>Broadband</h4>
+                    <p>High-speed internet</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-box-icon">🔧</div>
+                    <h4>Infrastructure</h4>
+                    <p>Switches, cabling, more</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div>
+                    <div class="stat-number">$50M+</div>
+                    <div class="stat-label">Funding Secured</div>
+                </div>
+                <div>
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Libraries Served</div>
+                </div>
+                <div>
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Approval Rate</div>
+                </div>
+                <div>
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Libraries Need E-Rate -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Why Libraries Need E-Rate More Than Ever</h2>
+            <p class="section-subtitle">Public libraries are essential community hubs for digital access. E-Rate helps bridge the digital divide.</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Digital Equity</h3>
+                    <p>Libraries provide critical internet access for community members without home broadband. E-Rate helps you provide faster, more reliable connections.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">👥</div>
+                    <h3>Community Demand</h3>
+                    <p>From job seekers to students, your community relies on library internet. E-Rate funding helps you meet growing bandwidth demands.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💼</div>
+                    <h3>Budget Constraints</h3>
+                    <p>Stretch your technology budget 5-10x further with E-Rate discounts. Free up funds for books, programs, and staff.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔒</div>
+                    <h3>Network Security</h3>
+                    <p>E-Rate Category 2 covers firewalls and security equipment, helping you protect patron data and maintain compliance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eligible Services -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">E-Rate Eligible Services for Libraries</h2>
+            <p class="section-subtitle">Here's what your library can fund through the E-Rate program:</p>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Category 1 - Connectivity</th>
+                        <th>Category 2 - Internal Connections</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Internet access service</td>
+                        <td>Wireless access points (Wi-Fi)</td>
+                    </tr>
+                    <tr>
+                        <td>Fiber optic connections</td>
+                        <td>Network switches & routers</td>
+                    </tr>
+                    <tr>
+                        <td>Data transmission services</td>
+                        <td>Structured cabling</td>
+                    </tr>
+                    <tr>
+                        <td>Voice services (limited)</td>
+                        <td>Firewall appliances</td>
+                    </tr>
+                    <tr>
+                        <td>Dark fiber leases</td>
+                        <td>UPS/battery backup</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p style="margin-top: 2rem;">
+                <a href="guides/what-is-e-rate.html" style="color: var(--accent); font-weight: 600;">Learn more about the E-Rate program →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- How We Help -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Complete E-Rate Application Management for Libraries</h2>
+            <p class="section-subtitle">We handle every step of the process so you don't have to.</p>
+            
+            <div class="cards-grid">
+                <div class="card" style="border-top: 4px solid var(--accent);">
+                    <h3>Form 470 & Competitive Bidding</h3>
+                    <p>We prepare and post your Form 470, manage the competitive bidding process, and help you evaluate vendor proposals.</p>
+                    <a href="services/form-470-filing.html" style="color: var(--accent); font-weight: 600; text-decoration: none;">Form 470 Filing Help →</a>
+                </div>
+                <div class="card" style="border-top: 4px solid var(--accent);">
+                    <h3>Form 471 Application Filing</h3>
+                    <p>We complete your funding application with accurate information, proper documentation, and strategic positioning.</p>
+                    <a href="services/form-471-filing.html" style="color: var(--accent); font-weight: 600; text-decoration: none;">Form 471 Filing Help →</a>
+                </div>
+                <div class="card" style="border-top: 4px solid var(--accent);">
+                    <h3>PIA Review Response</h3>
+                    <p>When USAC requests additional information, we prepare thorough responses that keep your application on track.</p>
+                    <a href="services/pia-review-support.html" style="color: var(--accent); font-weight: 600; text-decoration: none;">PIA Review Support →</a>
+                </div>
+                <div class="card" style="border-top: 4px solid var(--accent);">
+                    <h3>Appeals & Funding Recovery</h3>
+                    <p>If your application is denied, our 90%+ appeal success rate means we can likely recover your funding.</p>
+                    <a href="services/e-rate-appeals.html" style="color: var(--accent); font-weight: 600; text-decoration: none;">Appeal Denied Funding →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Story -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Library Success Story</h2>
+            
+            <div class="testimonial">
+                <blockquote>
+                    "After being completely denied due to a Form 471 technicality, E-Rate Consulting filed an appeal citing FCC precedents. Within 90 days, our full $89,000 in funding was restored. They know this program inside and out."
+                </blockquote>
+                <cite>— Director, Public Library System, Florida</cite>
+                <p style="margin-top: 1rem; color: var(--success); font-weight: 600;">✓ $89,000 Funding Recovered</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discount Calculator Preview -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Library E-Rate Discount Rates</h2>
+            <p class="section-subtitle">Your discount is based on the percentage of students in your service area who qualify for the National School Lunch Program.</p>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Poverty Level</th>
+                        <th>Category 1 Discount</th>
+                        <th>Category 2 Discount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>≥75% NSLP eligible</td>
+                        <td>90%</td>
+                        <td>85%</td>
+                    </tr>
+                    <tr>
+                        <td>50-74% NSLP eligible</td>
+                        <td>80%</td>
+                        <td>80%</td>
+                    </tr>
+                    <tr>
+                        <td>35-49% NSLP eligible</td>
+                        <td>60%</td>
+                        <td>60%</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;35% NSLP eligible</td>
+                        <td>20-50%</td>
+                        <td>20-50%</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p style="margin-top: 2rem; text-align: center;">
+                <a href="guides/e-rate-eligibility-calculator.html" class="btn btn-primary">Calculate Your Discount Rate →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Maximize Your Library's E-Rate Funding?</h2>
+            <p>Join 150+ libraries that trust us to handle their E-Rate applications. Get started with a free eligibility assessment.</p>
+            <a href="https://app.erateapp.com/signup" class="btn btn-primary">Get Free Eligibility Check →</a>
+        </div>
+    </section>
+
+    <!-- Related Pages -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Learn More About E-Rate</h2>
+            <div class="internal-links">
+                <a href="guides/what-is-e-rate.html" class="internal-link">What is E-Rate? →</a>
+                <a href="guides/e-rate-deadlines-2026.html" class="internal-link">2026 E-Rate Deadlines →</a>
+                <a href="services/e-rate-appeals.html" class="internal-link">E-Rate Appeal Help →</a>
+                <a href="schools.html" class="internal-link">E-Rate for Schools →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 E-Rate Consulting LLC. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">
+                <a href="index.html">Home</a> | 
+                <a href="schools.html">Schools</a> | 
+                <a href="libraries.html">Libraries</a> |
+                <a href="services/e-rate-appeals.html">Appeals</a> |
+                <a href="index.html#contact">Contact</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

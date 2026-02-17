@@ -1,0 +1,53 @@
+﻿Fetching from https://opendata.usac.org/resource/srbr-2d59.json...
+Status: 200
+Found 3 records
+
+=== ALL FIELDS ===
+  account_administrator_name: Shubham Pandey
+  actual_start_date: 2016-07-01T00:00:00.000
+  application_number: 161006829
+  award_date: 2014-03-13T00:00:00.000
+  ben: 16038543
+  cnct_email: csantiago@erate360.com
+  cnct_name: Courtney Santiago
+  contract_expiration_date: 2017-06-30T00:00:00.000
+  crn_data: {E-Rate 360 Solutions, LLC|16048893|ugarofano@erate360.com}
+  dis_pct: 0.5
+  epc_organization_id: 143033971
+  f486_case_status: Approved
+  fcdl_comment_app: MR1:The applicant did not submit any RAL corrections.
+  fcdl_comment_frn: MR1:Approved as submitted.
+  fcdl_letter_date: 2016-07-09T00:00:00.000
+  form_471_frn_status_name: Funded
+  form_471_service_type_name: Voice
+  form_486_no: 1322
+  form_version: Current
+  frn_original_requested_amt: 9367.2
+  funding_commitment_request: 9367.2
+  funding_request_number: 1699009435
+  funding_year: 2016
+  invoicing_mode: SPI
+  invoicing_ready: Yes
+  is_certified_in_window: In Window
+  last_date_to_invoice: 2017-10-30T00:00:00.000
+  months_of_service: 12
+  nickname: Voip
+  old_470_number: 678650001158566
+  organization_entity_type_name: School
+  organization_name: 100 Academy Of Excellence
+  original_dis_pct: 0.5
+  original_total_pre_discount_costs: 18734.4
+  pending_reason: FCDL Issued
+  service_delivery_deadline: 2017-06-30T00:00:00.000
+  service_start_date: 2016-07-01T00:00:00.000
+  spac_filed: Yes
+  spin_name: Jive  Communications, Inc.
+  state: NV
+  total_authorized_disbursement: 6958.14
+  total_monthly_recurring_eligible_costs: 1561.2
+  total_pre_discount_costs: 18734.4
+  total_pre_discount_eligible_one_time_costs: 0
+  total_pre_discount_eligible_recurring_costs: 18734.4
+  usac_contract_id: 5663
+  was_fcc_form_470_posted: No
+  wave_sequence_number: 3

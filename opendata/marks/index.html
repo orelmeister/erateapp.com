@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Design Variations</title>
+    <style>
+        /* Reset & Base */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: system-ui, -apple-system, sans-serif; height: 100vh; display: flex; overflow: hidden; }
+        
+        /* Sidebar */
+        #sidebar {
+            width: 250px;
+            background: #f0f0f0;
+            border-right: 1px solid #ddd;
+            padding: 20px;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+        #sidebar h2 { font-size: 1.2rem; margin-bottom: 20px; color: #333; }
+        .theme-btn {
+            display: block;
+            width: 100%;
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            border: none;
+            background: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+            color: #555;
+            border: 1px solid #ddd;
+        }
+        .theme-btn:hover { background: #e9e9e9; color: #000; }
+        .theme-btn.active { background: #333; color: #fff; border-color: #333; }
+
+        /* Main Preview Area */
+        #preview {
+            flex-grow: 1;
+            position: relative;
+            background: #fff;
+        }
+        
+        .design-container {
+            display: none;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+        }
+        .design-container.active { display: flex; }
+
+        /* --- Common Chat Elements (Base) --- */
+        .chat-header { padding: 15px 20px; border-bottom: 1px solid rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: space-between; }
+        .chat-body { flex-grow: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 20px; }
+        .chat-input-area { padding: 20px; border-top: 1px solid rgba(0,0,0,0.1); }
+        .input-wrapper { display: flex; gap: 10px; }
+        .msg { max-width: 80%; padding: 12px 16px; border-radius: 12px; line-height: 1.5; position: relative; }
+        .msg.ai { align-self: flex-start; }
+        .msg.user { align-self: flex-end; }
+        .avatar { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; }
+
+        /* =========================================
+           THEME 1: MINIMALIST
+           ========================================= */
+        #theme-minimalist {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #111;
+        }
+        #theme-minimalist .chat-header { border-bottom: none; }
+        #theme-minimalist .msg.ai { background: transparent; padding-left: 0; color: #333; }
+        #theme-minimalist .msg.user { background: #f3f3f3; color: #000; border-radius: 8px; }
+        #theme-minimalist .chat-input-area { border-top: none; }
+        #theme-minimalist input { 
+            width: 100%; padding: 15px; border: none; outline: none; font-size: 1rem; 
+            border-bottom: 1px solid #eee; transition: border 0.3s;
+        }
+        #theme-minimalist input:focus { border-bottom: 1px solid #000; }
+        #theme-minimalist .avatar { display: none; } /* True minimalism */
+
+        /* =========================================
+           THEME 2: CYBERPUNK
+           ========================================= */
+        #theme-cyberpunk {
+            background: #050505;
+            color: #00ff9d;
+            font-family: 'Courier New', monospace;
+        }
+        #theme-cyberpunk .chat-header { 
+            border-bottom: 1px solid #00ff9d; 
+            box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+        }
+        #theme-cyberpunk .msg.ai { 
+            border: 1px solid #00ff9d; 
+            background: rgba(0, 255, 157, 0.05);
+            box-shadow: 0 0 5px rgba(0, 255, 157, 0.2);
+            border-radius: 0;
+        }
+        #theme-cyberpunk .msg.user { 
+            border: 1px solid #ff00ff; 
+            color: #ff00ff;
+            background: rgba(255, 0, 255, 0.05);
+            box-shadow: 0 0 5px rgba(255, 0, 255, 0.2);
+            border-radius: 0;
+        }
+        #theme-cyberpunk input {
+            background: #000; border: 1px solid #00ff9d; color: #00ff9d; padding: 15px; width: 100%;
+            font-family: 'Courier New', monospace;
+        }
+        #theme-cyberpunk button {
+            background: #00ff9d; color: #000; border: none; padding: 0 20px; font-weight: bold; cursor: pointer;
+        }
+
+        /* =========================================
+           THEME 3: GLASSMORPHISM
+           ========================================= */
+        #theme-glass {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: sans-serif;
+        }
+        #theme-glass .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            height: 100%; display: flex; flex-direction: column;
+        }
+        #theme-glass .msg {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        #theme-glass .msg.user { background: rgba(255, 255, 255, 0.25); }
+        #theme-glass input {
+            background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white; padding: 15px; border-radius: 20px; width: 100%;
+        }
+        #theme-glass input::placeholder { color: rgba(255,255,255,0.6); }
+
+        /* =========================================
+           THEME 4: ENTERPRISE (SaaS)
+           ========================================= */
+        #theme-enterprise {
+            background: #f4f6f8;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #2c3e50;
+        }
+        #theme-enterprise .chat-header { background: #fff; border-bottom: 1px solid #e1e4e8; padding: 10px 20px; }
+        #theme-enterprise .chat-body { background: #f4f6f8; }
+        #theme-enterprise .msg { border-radius: 4px; font-size: 14px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        #theme-enterprise .msg.ai { background: #fff; border: 1px solid #e1e4e8; }
+        #theme-enterprise .msg.user { background: #0052cc; color: white; }
+        #theme-enterprise .chat-input-area { background: #fff; border-top: 1px solid #e1e4e8; padding: 15px; }
+        #theme-enterprise input {
+            border: 1px solid #dfe1e6; border-radius: 3px; padding: 10px; width: 100%;
+        }
+
+        /* =========================================
+           THEME 5: NEUMORPHISM
+           ========================================= */
+        #theme-neumorphism {
+            background: #e0e5ec;
+            font-family: 'Nunito', sans-serif;
+            color: #4a4a4a;
+        }
+        #theme-neumorphism .msg {
+            border-radius: 20px;
+            background: #e0e5ec;
+            box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5);
+            border: none;
+        }
+        #theme-neumorphism .msg.user {
+            background: #e0e5ec;
+            color: #6d5dfc;
+        }
+        #theme-neumorphism input {
+            background: #e0e5ec;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            width: 100%;
+            box-shadow: inset 6px 6px 10px 0 rgba(163,177,198, 0.7), inset -6px -6px 10px 0 rgba(255,255,255, 0.8);
+            outline: none; color: #4a4a4a;
+        }
+
+        /* =========================================
+           THEME 6: TERMINAL
+           ========================================= */
+        #theme-terminal {
+            background: #000000;
+            color: #33ff00;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+        #theme-terminal .msg { padding: 5px 0; border-radius: 0; max-width: 100%; }
+        #theme-terminal .msg.ai::before { content: "AI@SYSTEM:~$ "; color: #fff; }
+        #theme-terminal .msg.user::before { content: "USER@LOCAL:~$ "; color: #0099ff; }
+        #theme-terminal .msg.user { align-self: flex-start; color: #33ff00; }
+        #theme-terminal input {
+            background: transparent; border: none; color: #33ff00; width: 100%;
+            font-family: inherit; font-size: 1rem; outline: none;
+        }
+        #theme-terminal .input-prefix { color: #0099ff; margin-right: 10px; }
+
+        /* =========================================
+           THEME 7: ORGANIC / NATURE
+           ========================================= */
+        #theme-organic {
+            background: #f7f5f0;
+            color: #2c3e2c;
+            font-family: 'Merriweather', serif;
+        }
+        #theme-organic .msg {
+            border-radius: 20px 20px 20px 0;
+            padding: 15px 20px;
+        }
+        #theme-organic .msg.ai {
+            background: #e8e6df;
+            border-radius: 20px 20px 20px 0;
+        }
+        #theme-organic .msg.user {
+            background: #8f9e8a;
+            color: #fff;
+            border-radius: 20px 20px 0 20px;
+        }
+        #theme-organic input {
+            background: #fff; border: 1px solid #dcdcdc; border-radius: 30px;
+            padding: 15px 25px; width: 100%; font-family: inherit;
+        }
+
+        /* =========================================
+           THEME 8: HIGH CONTRAST
+           ========================================= */
+        #theme-contrast {
+            background: #ffffff;
+            color: #000000;
+            font-family: 'Arial Black', sans-serif;
+        }
+        #theme-contrast .msg {
+            border: 4px solid #000;
+            border-radius: 0;
+            font-weight: bold;
+            font-size: 1.1rem;
+            background: #fff;
+        }
+        #theme-contrast .msg.user {
+            background: #ffff00; /* Yellow */
+            box-shadow: 8px 8px 0px #000;
+        }
+        #theme-contrast .msg.ai {
+            box-shadow: -8px 8px 0px #000;
+        }
+        #theme-contrast input {
+            border: 4px solid #000; padding: 15px; width: 100%; font-weight: bold;
+        }
+        #theme-contrast button {
+            background: #000; color: #fff; border: none; padding: 0 30px; font-weight: bold;
+        }
+
+        /* =========================================
+           THEME 9: HOLOGRAPHIC (E-Rate App Brand)
+           ========================================= */
+        #theme-holographic {
+            /* Brand Blue #4a90e2, Brand Purple #9b59b6, Brand Teal #1abc9c */
+            background: linear-gradient(125deg, #2c3e50 0%, #4a90e2 50%, #9b59b6 100%);
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            background-size: 200% 200%;
+            animation: holoGradient 15s ease infinite;
+        }
+        @keyframes holoGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        #theme-holographic .msg {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        #theme-holographic .msg.user {
+            /* Brand Blue Gradient */
+            background: linear-gradient(90deg, rgba(74, 144, 226, 0.6), rgba(52, 152, 219, 0.6));
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        #theme-holographic input {
+            background: rgba(255, 255, 255, 0.1); 
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white; 
+            padding: 15px; 
+            border-radius: 30px; 
+            width: 100%;
+            backdrop-filter: blur(5px);
+        }
+        #theme-holographic input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* =========================================
+           THEME 10: CARD BASED
+           ========================================= */
+        #theme-card {
+            background: #e5e5e5;
+            font-family: 'Roboto', sans-serif;
+        }
+        #theme-card .chat-body { padding: 40px; }
+        #theme-card .msg {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            max-width: 100%;
+            margin-bottom: 10px;
+            border-left: 4px solid transparent;
+        }
+        #theme-card .msg.ai { border-left-color: #ff4757; }
+        #theme-card .msg.user { border-left-color: #2ed573; align-self: stretch; }
+        #theme-card input {
+            background: #fff; border: none; padding: 20px; width: 100%;
+            box-shadow: 0 -2px 20px rgba(0,0,0,0.05);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="sidebar">
+        <h2>Design Variations</h2>
+        <button class="theme-btn active" onclick="switchTheme('minimalist')">1. Minimalist</button>
+        <button class="theme-btn" onclick="switchTheme('cyberpunk')">2. Cyberpunk</button>
+        <button class="theme-btn" onclick="switchTheme('glass')">3. Glassmorphism</button>
+        <button class="theme-btn" onclick="switchTheme('enterprise')">4. Enterprise SaaS</button>
+        <button class="theme-btn" onclick="switchTheme('neumorphism')">5. Neumorphism</button>
+        <button class="theme-btn" onclick="switchTheme('terminal')">6. Terminal / Retro</button>
+        <button class="theme-btn" onclick="switchTheme('organic')">7. Organic / Nature</button>
+        <button class="theme-btn" onclick="switchTheme('contrast')">8. High Contrast</button>
+        <button class="theme-btn" onclick="switchTheme('holographic')">9. Holographic</button>
+        <button class="theme-btn" onclick="switchTheme('card')">10. Card Based</button>
+    </div>
+
+    <div id="preview">
+        <!-- Template for content, will be cloned/styled -->
+        
+        <!-- 1. Minimalist -->
+        <div id="theme-minimalist" class="design-container active">
+            <div class="chat-header"><h3>Minimalist AI</h3></div>
+            <div class="chat-body">
+                <div class="msg ai">Hello. How can I help you today?</div>
+                <div class="msg user">I need a clean design for my app.</div>
+                <div class="msg ai">I can certainly help with that. Simplicity is the ultimate sophistication.</div>
+            </div>
+            <div class="chat-input-area"><input type="text" placeholder="Type a message..."></div>
+        </div>
+
+        <!-- 2. Cyberpunk -->
+        <div id="theme-cyberpunk" class="design-container">
+            <div class="chat-header"><h3>SYSTEM_OVERRIDE // V.2.0</h3></div>
+            <div class="chat-body">
+                <div class="msg ai">SYSTEM ONLINE. AWAITING INPUT.</div>
+                <div class="msg user">Hack the mainframe.</div>
+                <div class="msg ai">ACCESS GRANTED. DEPLOYING COUNTERMEASURES...</div>
+            </div>
+            <div class="chat-input-area">
+                <div class="input-wrapper">
+                    <input type="text" placeholder="ENTER COMMAND_">
+                    <button>SEND</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Glass -->
+        <div id="theme-glass" class="design-container">
+            <div class="glass-panel">
+                <div class="chat-header"><h3>Vision AI</h3></div>
+                <div class="chat-body">
+                    <div class="msg ai">Good morning. The weather is clear today.</div>
+                    <div class="msg user">Show me my schedule.</div>
+                    <div class="msg ai">You have 3 meetings scheduled.</div>
+                </div>
+                <div class="chat-input-area"><input type="text" placeholder="Ask anything..."></div>
+            </div>
+        </div>
+
+        <!-- 4. Enterprise -->
+        <div id="theme-enterprise" class="design-container">
+            <div class="chat-header"><h3>Enterprise Assistant Pro</h3></div>
+            <div class="chat-body">
+                <div class="msg ai">I've analyzed the Q3 financial reports. Revenue is up 15%.</div>
+                <div class="msg user">Generate a summary PDF.</div>
+                <div class="msg ai">Processing request... Document generated successfully.</div>
+            </div>
+            <div class="chat-input-area"><input type="text" placeholder="Type your query here..."></div>
+        </div>
+
+        <!-- 5. Neumorphism -->
+        <div id="theme-neumorphism" class="design-container">
+            <div class="chat-header"><h3>Soft UI Chat</h3></div>
+            <div class="chat-body">
+                <div class="msg ai">This interface feels like soft plastic.</div>
+                <div class="msg user">It's very tactile.</div>
+                <div class="msg ai">Indeed. The shadows create depth.</div>
+            </div>
+            <div class="chat-input-area"><input type="text" placeholder="Type something soft..."></div>
+        </div>
+
+        <!-- 6. Terminal -->
+        <div id="theme-terminal" class="design-container">
+            <div class="chat-body">
+                <div class="msg ai">Initializing core logic... Done.</div>
+                <div class="msg user">run diagnostics</div>
+                <div class="msg ai">Scanning sectors... No errors found.</div>
+            </div>
+            <div class="chat-input-area">
+                <div style="display:flex; align-items:center;">
+                    <span class="input-prefix">USER@LOCAL:~$</span>
+                    <input type="text" autofocus>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. Organic -->
+        <div id="theme-organic" class="design-container">
+            <div class="chat-header"><h3>Sage Assistant</h3></div>
+            <div class="chat-body">
+                <div class="msg ai">Take a deep breath. How are you feeling?</div>
+                <div class="msg user">I'm feeling calm and centered.</div>
+                <div class="msg ai">That is wonderful to hear. Nature heals.</div>
+            </div>
+            <div class="chat-input-area"><input type="text" placeholder="Share your thoughts..."></div>
+        </div>
+
+        <!-- 8. Contrast -->
+        <div id="theme-contrast" class="design-container">
+            <div class="chat-header"><h3>BOLD CHAT</h3></div>
+            <div class="chat-body">
+                <div class="msg ai">IS THIS CLEAR ENOUGH?</div>
+                <div class="msg user">YES, VERY READABLE.</div>
+                <div class="msg ai">EXCELLENT. ACCESSIBILITY MATTERS.</div>
+            </div>
+            <div class="chat-input-area">
+                <div class="input-wrapper">
+                    <input type="text" placeholder="TYPE HERE">
+                    <button>GO</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. Holographic -->
+        <div id="theme-holographic" class="design-container">
+            <div class="chat-header"><h3>HoloInterface</h3></div>
+            <div class="chat-body">
+                <div class="msg ai">Greetings from the future.</div>
+                <div class="msg user">Is this real?</div>
+                <div class="msg ai">Reality is merely a simulation.</div>
+            </div>
+            <div class="chat-input-area"><input type="text" placeholder="Enter the matrix..."></div>
+        </div>
+
+        <!-- 10. Card -->
+        <div id="theme-card" class="design-container">
+            <div class="chat-header"><h3>Dashboard Chat</h3></div>
+            <div class="chat-body">
+                <div class="msg ai">
+                    <strong>Response #124</strong><br>
+                    Here is the data you requested. It has been organized into this card for easy sorting.
+                </div>
+                <div class="msg user">
+                    <strong>User Query</strong><br>
+                    Thanks, can you archive this?
+                </div>
+                <div class="msg ai">
+                    <strong>Action</strong><br>
+                    Archived to 'Project Alpha'.
+                </div>
+            </div>
+            <div class="chat-input-area"><input type="text" placeholder="New card..."></div>
+        </div>
+
+    </div>
+
+    <script>
+        function switchTheme(themeName) {
+            // Hide all containers
+            document.querySelectorAll('.design-container').forEach(el => el.classList.remove('active'));
+            // Show selected
+            document.getElementById('theme-' + themeName).classList.add('active');
+            
+            // Update buttons
+            document.querySelectorAll('.theme-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
