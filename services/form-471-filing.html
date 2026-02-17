@@ -202,13 +202,40 @@
     </style>
 </head>
 <body>
-    <div class="urgency-banner">
-        ⏰ FY2026 Form 471 Filing Window is OPEN | Deadline: March 2026 | <a href="https://app.erateapp.com/signup" style="color: #ffeb3b;">Get Help Now →</a>
+    <!-- E-Rate Deadline Urgency Banner (Dynamic) -->
+    <div id="urgency-banner" style="background: linear-gradient(90deg, #c62828 0%, #d32f2f 50%, #c62828 100%); color: white; text-align: center; padding: 10px 20px; font-weight: 600; font-size: 0.95rem; position: relative; z-index: 1001; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+        <span style="margin-right: 8px;">⏰</span>
+        <span id="banner-text">Loading E-Rate deadlines...</span>
+        <a href="https://app.erateapp.com/signup" style="color: #ffeb3b; margin-left: 12px; text-decoration: underline;">Don't Miss Out →</a>
     </div>
+    <script>
+        (function() {
+            const now = new Date();
+            const currentMonth = now.getMonth();
+            const currentYear = now.getFullYear();
+            let fundingYear = currentMonth >= 6 ? currentYear + 1 : currentYear;
+            
+            let message = '';
+            if (currentMonth >= 6 && currentMonth <= 8) {
+                message = `FY${fundingYear} Form 470 Window Opens Soon | Start Planning Now!`;
+            } else if (currentMonth >= 9 && currentMonth <= 11) {
+                message = `FY${fundingYear} Form 470 Window is OPEN | File by December for Best Results!`;
+            } else if (currentMonth >= 0 && currentMonth <= 1) {
+                message = `FY${fundingYear} Form 471 Window is OPEN | Deadline: March ${fundingYear}!`;
+            } else if (currentMonth >= 2 && currentMonth <= 3) {
+                message = `⚠️ FY${fundingYear} Form 471 Deadline Approaching | File NOW!`;
+            } else {
+                message = `FY${fundingYear} PIA Reviews in Progress | Respond Within 15 Days!`;
+            }
+            document.getElementById('banner-text').textContent = message;
+        })();
+    </script>
 
     <nav class="nav">
         <div class="container nav-content">
-            <a href="../index.html" class="nav-logo">E-Rate Consulting</a>
+            <a href="../index.html" class="nav-logo" style="display: flex; align-items: center;">
+                <img src="../logo.PNG" alt="E-Rate Consulting" style="height: 40px; width: auto;">
+            </a>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../schools.html">Schools</a></li>
