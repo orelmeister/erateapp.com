@@ -68,6 +68,14 @@
         <priority>0.7</priority>
     </url>
     
+    <!-- Blog Index -->
+    <url>
+        <loc>https://erateapp.com/blog/</loc>
+        <lastmod>2026-02-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
     <!-- Blog Posts (Link Equity Builders) -->
     <url>
         <loc>https://erateapp.com/blog/10-common-e-rate-mistakes.html</loc>
