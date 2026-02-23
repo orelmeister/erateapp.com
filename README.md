@@ -63,5 +63,5 @@ erateapp.com/
 
 ## Contact
 
-📧 ari@erateapp.com  
+📧 admin@erateapp.com  
 🌐 [erateapp.com](https://erateapp.com)
