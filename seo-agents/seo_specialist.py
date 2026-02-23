@@ -60,7 +60,7 @@ class SEOSpecialist:
     """
     
     def __init__(self):
-        self.industry = "E-Rate Consulting"
+        self.industry = "SkyRate"
         self.target_domain = "erateapp.com"
         self.keyword_database: List[KeywordData] = []
         
@@ -105,7 +105,7 @@ class SEOSpecialist:
         keywords = [
             # Application Help Keywords (High Intent)
             KeywordData(
-                keyword="e-rate consulting services for schools",
+                keyword="SkyRate services for schools",
                 search_intent="transactional",
                 estimated_volume="medium",
                 competition="medium",
@@ -172,7 +172,7 @@ class SEOSpecialist:
                 recommended_page="/private-schools"
             ),
             KeywordData(
-                keyword="e-rate consulting for libraries",
+                keyword="SkyRate for libraries",
                 search_intent="transactional",
                 estimated_volume="low",
                 competition="low",
@@ -250,9 +250,9 @@ class SEOSpecialist:
         recommendations = [
             TitleTagRecommendation(
                 page_url="/",
-                current_title="E-Rate Consulting | #1 E-Rate Application & Funding Experts",
-                recommended_title="E-Rate Consulting Services for Schools | 98% Approval Rate",
-                primary_keyword="e-rate consulting services for schools",
+                current_title="SkyRate | #1 E-Rate Application & Funding Experts",
+                recommended_title="SkyRate Services for Schools | 98% Approval Rate",
+                primary_keyword="SkyRate services for schools",
                 character_count=55
             ),
             TitleTagRecommendation(
@@ -300,8 +300,8 @@ class SEOSpecialist:
             TitleTagRecommendation(
                 page_url="/library-e-rate",
                 current_title=None,
-                recommended_title="E-Rate Consulting for Libraries | Maximize Discounts",
-                primary_keyword="e-rate consulting for libraries",
+                recommended_title="SkyRate for Libraries | Maximize Discounts",
+                primary_keyword="SkyRate for libraries",
                 character_count=52
             ),
             TitleTagRecommendation(
@@ -471,7 +471,7 @@ class SEOSpecialist:
         """
         # Analysis based on E-Rate consulting landscape
         serp_data = {
-            "e-rate consulting services for schools": {
+            "SkyRate services for schools": {
                 "serp_features": ["local_pack", "faq_snippet"],
                 "top_competitors": ["e-ratecentral.com", "fundsforlearning.com", "kelloggllc.com"],
                 "opportunity": "Position 8-15 achievable with proper optimization"

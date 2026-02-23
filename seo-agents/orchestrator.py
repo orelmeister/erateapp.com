@@ -221,7 +221,7 @@ class SEOOrchestrator:
         # Phase 2: Keyword Strategy
         results["phases"]["keyword_strategy"] = self.delegate_to_seo_specialist(
             "keyword_research",
-            {"industry": "E-Rate Consulting", "competitors": self.config.get("target_site", {}).get("primary_competitors", [])}
+            {"industry": "SkyRate", "competitors": self.config.get("target_site", {}).get("primary_competitors", [])}
         )
         
         # Phase 3: Content Analysis
@@ -277,9 +277,9 @@ class SEOOrchestrator:
         return [
             Page(
                 url="/",
-                title_tag="E-Rate Consulting Services for Schools | 98% Approval Rate",
-                h1="E-Rate Consulting Services That Help Schools Secure Maximum Funding",
-                primary_keyword="e-rate consulting services for schools",
+                title_tag="SkyRate Services for Schools | 98% Approval Rate",
+                h1="SkyRate Services That Help Schools Secure Maximum Funding",
+                primary_keyword="SkyRate services for schools",
                 secondary_keywords=["e-rate application help", "school technology funding consultant"],
                 silo="Main Conversion Hub",
                 meta_description="Expert E-Rate consulting with 98% approval rate. We've secured $50M+ for 500+ schools & libraries. Get professional Form 470 & 471 help. Free consultation."
@@ -340,9 +340,9 @@ class SEOOrchestrator:
             ),
             Page(
                 url="/library-e-rate",
-                title_tag="E-Rate Consulting for Libraries | Maximize Discounts",
-                h1="E-Rate Consulting for Libraries: Secure Your Technology Funding",
-                primary_keyword="e-rate consulting for libraries",
+                title_tag="SkyRate for Libraries | Maximize Discounts",
+                h1="SkyRate for Libraries: Secure Your Technology Funding",
+                primary_keyword="SkyRate for libraries",
                 secondary_keywords=["library technology funding", "public library e-rate application"],
                 silo="Audience Segments",
                 meta_description="Expert E-Rate consulting for public and private libraries. Maximize your technology discounts with our 25+ years of library E-Rate experience."

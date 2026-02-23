@@ -39,7 +39,7 @@ This document outlines a comprehensive, Day-1 SEO strategy for erateapp.com, a S
 
 | Page URL | Primary Keyword | Secondary Keywords | Search Intent |
 |----------|-----------------|-------------------|---------------|
-| `/` | e-rate consulting services | e-rate application help for schools, hire e-rate consultant | Transactional |
+| `/` | SkyRate services | e-rate application help for schools, hire e-rate consultant | Transactional |
 | `/services/e-rate-application-management` | e-rate application management company | outsource e-rate paperwork, full service e-rate filing | Transactional |
 | `/services/e-rate-appeals` | **e-rate appeal help** ⭐ | e-rate funding denial appeal, usac appeal consultant | Transactional (HIGH VALUE) |
 | `/services/form-470-filing` | e-rate form 470 filing service | help with form 470, form 470 competitive bidding help | Transactional |
@@ -74,7 +74,7 @@ This document outlines a comprehensive, Day-1 SEO strategy for erateapp.com, a S
 
 | Planned URL | Optimized Title Tag | H1 Tag |
 |-------------|--------------------|---------
-| `/` | E-Rate Consulting Services \| 98% Approval | Stop Critical E-Rate Application Errors from Costing You Hundreds of Thousands in Funding |
+| `/` | SkyRate Services \| 98% Approval | Stop Critical E-Rate Application Errors from Costing You Hundreds of Thousands in Funding |
 | `/services/e-rate-application-management` | E-Rate Application Management \| Full Service | Let Our Experts Handle Your Entire E-Rate Application So You Never Miss a Deadline |
 | `/services/e-rate-appeals` | E-Rate Appeal Help \| 90%+ Win Rate | Funding Denied? We've Won Hundreds of E-Rate Appeals and Can Win Yours |
 | `/services/form-470-filing` | E-Rate Form 470 Filing Service \| Expert Help | Professional Form 470 Filing That Maximizes Competitive Bids and Vendor Options |

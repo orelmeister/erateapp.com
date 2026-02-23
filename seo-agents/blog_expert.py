@@ -47,7 +47,7 @@ class BlogPost:
     outline: List[Dict[str, str]]  # {"heading": "H2 text", "content_notes": "..."}
     internal_links: List[Dict[str, str]]  # {"anchor_text": "...", "destination": "..."}
     publish_date: Optional[str] = None
-    author: str = "E-Rate Consulting Team"
+    author: str = "SkyRate Team"
 
 
 @dataclass
@@ -71,7 +71,7 @@ class BlogExpert:
     """
     
     def __init__(self):
-        self.industry = "E-Rate Consulting"
+        self.industry = "SkyRate"
         self.target_domain = "erateapp.com"
         self.blog_base_url = "/blog/"
         self.posts: List[BlogPost] = []

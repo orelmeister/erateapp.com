@@ -70,7 +70,7 @@ class ContentStrategist:
     """
     
     def __init__(self):
-        self.industry = "E-Rate Consulting"
+        self.industry = "SkyRate"
         self.target_audience = [
             "school_administrators",
             "library_directors",

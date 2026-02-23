@@ -79,15 +79,15 @@
   },
   "target_site": {
     "domain": "erateapp.com",
-    "industry": "E-Rate Consulting",
+    "industry": "SkyRate",
     "target_audience": ["school_administrators", "library_directors", "it_directors", "business_managers"],
     "primary_competitors": ["usac.org", "e-ratecentral.com", "fundsforlearning.com"],
     "pages": {
       "core_pages": [
         {
           "url": "/",
-          "title": "E-Rate Consulting Services | 98% Approval",
-          "primary_keyword": "e-rate consulting services",
+          "title": "SkyRate Services | 98% Approval",
+          "primary_keyword": "SkyRate services",
           "silo": "hub"
         },
         {
