@@ -1,6 +1,6 @@
 # erateapp.com
 
-Official website for **E-Rate Consulting LLC** — expert E-Rate consultants with 25+ years of experience, a 98% approval rate, and $50M+ secured for schools and libraries.
+Official website for **SkyRate LLC** — expert E-Rate consultants with 25+ years of experience, a 98% approval rate, and $50M+ secured for schools and libraries.
 
 🔗 **Live site:** [erateapp.com](https://erateapp.com)  
 🚀 **App portal:** [app.erateapp.com](https://app.erateapp.com)
@@ -9,7 +9,7 @@ Official website for **E-Rate Consulting LLC** — expert E-Rate consultants wit
 
 ## About
 
-E-Rate Consulting helps schools, libraries, and charter schools navigate the federal E-Rate program to secure funding for internet connectivity and network infrastructure. We handle the entire process — from Form 470 competitive bidding through Form 471 filing, PIA review support, and appeals.
+SkyRate helps schools, libraries, and charter schools navigate the federal E-Rate program to secure funding for internet connectivity and network infrastructure. We handle the entire process — from Form 470 competitive bidding through Form 471 filing, PIA review support, and appeals.
 
 ## Site Structure
 
