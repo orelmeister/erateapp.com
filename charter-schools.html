@@ -14,6 +14,13 @@
     <meta property="og:title" content="E-Rate for Charter Schools | Complete Eligibility Guide">
     <meta property="og:description" content="Charter schools ARE eligible for E-Rate. Learn the requirements and how to apply.">
     
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#1976d2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/img/icons/icon-192x192.png">
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://erateapp.com/charter-schools.html">
     
@@ -476,6 +483,7 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 SkyRate LLC. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">📞 <a href="tel:855-765-7291" style="color:#e3f2fd;">(855) 765-7291</a> (Toll-Free) | <a href="mailto:admin@erateapp.com">admin@erateapp.com</a></p>
             <p style="margin-top: 0.5rem;">
                 <a href="index.html">Home</a> | 
                 <a href="services/e-rate-appeals.html">Appeals</a> | 
@@ -485,5 +493,17 @@
             </p>
         </div>
     </footer>
+
+    <!-- PWA: Service Worker Registration -->
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('SW registered:', reg.scope))
+                .catch(err => console.warn('SW registration failed:', err));
+        });
+    }
+    </script>
+    <script src="/install-prompt.js" defer></script>
 </body>
 </html>
