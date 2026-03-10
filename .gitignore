@@ -3,3 +3,7 @@ opendata/skyrate-ai-v2/
 *.zip
 __pycache__/
 .env
+
+# Credentials
+.credentials/
+authentic-genre-*.json
