@@ -1,9 +1,28 @@
 ---
 name: orchestrator
 description: Main SEO orchestrator agent for erateapp.com that coordinates all SEO activities across specialist sub-agents. This agent analyzes the website, develops strategy using sequential thinking, and delegates tasks to specialized sub-agents.
-tools: 
-  ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'chromedevtools/chrome-devtools-mcp/*', 'context7/*', 'github/*', 'memory/*', 'microsoft/clarity-mcp-server/*', 'playwright/*', 'sequentialthinking/*', 'ms-python.python/getPythonEnvironmentInfo', 'ms-python.python/getPythonExecutableCommand', 'ms-python.python/installPythonPackage', 'ms-python.python/configurePythonEnvironment', 'todo']
-agents: ['seo_specialist', 'content_strategist', 'link_architect', 'blog_expert']
+tools:
+  - vscode
+  - execute
+  - read
+  - agent
+  - edit
+  - search
+  - web
+  - chromedevtools/chrome-devtools-mcp/*
+  - context7/*
+  - github/*
+  - memory/*
+  - microsoft/clarity-mcp-server/*
+  - playwright/*
+  - sequentialthinking/*
+  - ms-python.python/*
+  - todo
+agents:
+  - seo_specialist
+  - content_strategist
+  - link_architect
+  - blog_expert
 ---
 # SEO Orchestrator Agent
 

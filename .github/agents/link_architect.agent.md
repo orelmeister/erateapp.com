@@ -1,8 +1,22 @@
 ---
 name: link_architect
 description: Internal linking specialist sub-agent for silo architecture, link mapping, anchor text optimization, and link equity distribution for erateapp.com.
-tools: 
-  ['vscode', 'execute', 'read', 'edit', 'search', 'web', 'github/*', 'memory/*', 'fetch/*', 'sequentialthinking/*', 'ms-python.python/*']
+tools:
+  - vscode
+  - execute
+  - read
+  - edit
+  - search
+  - web
+  - context7/*
+  - github/*
+  - memory/*
+  - fetch/*
+  - playwright/*
+  - sequentialthinking/*
+  - chromedevtools/chrome-devtools-mcp/*
+  - microsoft/clarity-mcp-server/*
+  - ms-python.python/*
 ---
 # Link Architect Agent
 

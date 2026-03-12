@@ -1,8 +1,22 @@
 ---
 name: blog_expert
 description: Blog content specialist sub-agent for blog post planning, SEO-optimized outlines, internal link placement, and content calendar execution for erateapp.com.
-tools: 
-  ['vscode', 'execute', 'read', 'edit', 'search', 'web', 'github/*', 'memory/*', 'fetch/*', 'sequentialthinking/*', 'ms-python.python/*']
+tools:
+  - vscode
+  - execute
+  - read
+  - edit
+  - search
+  - web
+  - context7/*
+  - github/*
+  - memory/*
+  - fetch/*
+  - playwright/*
+  - sequentialthinking/*
+  - chromedevtools/chrome-devtools-mcp/*
+  - microsoft/clarity-mcp-server/*
+  - ms-python.python/*
 ---
 # Blog Expert Agent
 
