@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -207,7 +207,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div id="urgency-banner" style="background: linear-gradient(90deg, #c62828 0%, #d32f2f 50%, #c62828 100%); color: white; text-align: center; padding: 12px 20px; font-weight: 600; position: relative; z-index: 9999;">
         <span style="margin-right: 8px;">&#9200;</span>
         <span id="banner-text">Loading E-Rate deadlines...</span>
-        <a href="https://app.erateapp.com/signup" style="color: #ffeb3b; margin-left: 15px; text-decoration: underline;">Don't Miss Out &#8594;</a>
+        <a href="/get-started.html" style="color: #ffeb3b; margin-left: 15px; text-decoration: underline;">Don't Miss Out &#8594;</a>
     </div>
     <script>
         // Dynamic E-Rate Funding Year Calculator
@@ -258,7 +258,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="blog/">Blog</a>
                 <a href="#contact" class="cta-button">Contact</a>
                 <a href="https://app.erateapp.com" class="nav-login-btn">Login</a>
-                <a href="https://app.erateapp.com/signup" class="cta-button">Get Started</a>
+                <a href="/get-started.html" class="cta-button">Get Started</a>
             </div>
         </nav>
     </header>
@@ -267,7 +267,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="hero-image"><img src="img/hero-image.png" alt="Modern school technology"></div>
             <h1>Stop Critical E-Rate Application Errors from Costing You Hundreds of Thousands in Funding</h1>
             <p>Our platform is backed by certified E-Rate experts with over 30 years of experience. Since 1998, we have helped schools secure millions in E-Rate funding, ensuring you maximize your awards with minimal effort and zero risk. Stop sacrificing your weekends and start giving your students the technological resources they deserve.</p>
-            <a href="https://app.erateapp.com/signup" class="cta-button">Secure Your Funding Now</a>
+            <a href="/get-started.html" class="cta-button">Secure Your Funding Now</a>
             <p class="hero-trust">Trusted by school and library administrators nationwide to secure their critical funding</p>
         </div>
     </section>
@@ -622,10 +622,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     const form = this;
                     const btn = document.getElementById('submit-btn');
                     const status = document.getElementById('form-status');
-                    
+
                     btn.disabled = true;
                     btn.textContent = 'Sending...';
-                    
+
+                    // Fire-and-forget: also POST to skyrate.ai lead-capture API
+                    try {
+                        const utmParams = new URLSearchParams(window.location.search);
+                        const apiPayload = {
+                            name: form.full_name.value.trim(),
+                            email: form.work_email.value.trim(),
+                            phone: form.phone_number.value.trim(),
+                            organization: form.organization_name.value.trim(),
+                            student_count: form.student_count.value || null,
+                            role: null,
+                            ben: null,
+                            source: 'erateapp.com/homepage-form',
+                            utm_source: utmParams.get('utm_source') || null,
+                            utm_medium: utmParams.get('utm_medium') || null,
+                            utm_campaign: utmParams.get('utm_campaign') || null,
+                            notes: form.job_title.value.trim() || null,
+                            _hp: (form._honey && form._honey.value) || ''
+                        };
+                        fetch('https://api.skyrate.ai/api/v1/leads/capture', {
+                            method: 'POST',
+                            mode: 'cors',
+                            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                            body: JSON.stringify(apiPayload),
+                            keepalive: true
+                        }).catch(function(err) { console.warn('[homepage-form] API mirror failed:', err); });
+                    } catch (apiErr) { console.warn('[homepage-form] API payload build failed:', apiErr); }
+
                     fetch(form.action, {
                         method: 'POST',
                         body: new FormData(form),
