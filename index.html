@@ -644,7 +644,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             notes: form.job_title.value.trim() || null,
                             _hp: (form._honey && form._honey.value) || ''
                         };
-                        fetch('https://api.skyrate.ai/api/v1/leads/capture', {
+                        fetch('https://skyrate.ai/api/v1/leads/capture', {
                             method: 'POST',
                             mode: 'cors',
                             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
