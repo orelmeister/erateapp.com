@@ -41,7 +41,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css?v=20260427">
+    <link rel="stylesheet" href="../style.css?v=20260501">
 
     <script type="application/ld+json">
     {
@@ -138,20 +138,28 @@
     <header>
         <nav class="container">
             <div class="logo"><a href="/"><img src="../logo.PNG" alt="erateapp Logo"></a></div>
-            <div class="nav-links">
+            <button class="hamburger" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            <div class="nav-links" id="navLinks">
                 <a href="/#about">About</a>
                 <a href="/#services">Services</a>
                 <a href="/schools.html">Schools</a>
                 <a href="/libraries.html">Libraries</a>
                 <a href="/free-audit.html">Free Audit</a>
-                <a href="/case-studies/">Case Studies</a>
+                <div class="nav-dropdown" id="resourcesDropdown">
+                    <button class="nav-dropdown-btn" id="resourcesBtn" aria-haspopup="true" aria-expanded="false">Resources <span class="dropdown-arrow">&#9660;</span></button>
+                    <div class="nav-dropdown-menu" id="resourcesMenu" role="menu">
+                        <a href="/blog/" role="menuitem">Blog</a>
+                        <a href="/case-studies/" role="menuitem">Case Studies</a>
+                        <a href="/services/e-rate-appeals.html" role="menuitem">Appeals</a>
+                    </div>
+                </div>
                 <a href="https://skyrate.ai/tools/ben-tracker" target="_blank" rel="noopener">BEN Lookup</a>
-                <a href="/blog/">Blog</a>
                 <a href="https://app.erateapp.com" class="nav-login-btn">Login</a>
                 <a href="/get-started.html" class="cta-button">Get Started</a>
             </div>
         </nav>
     </header>
+    <script>(function(){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('nav-open');t.setAttribute('aria-expanded',String(o));t.classList.toggle('is-open',o);});document.addEventListener('click',function(e){if(!t.contains(e.target)&&!n.contains(e.target)){n.classList.remove('nav-open');t.setAttribute('aria-expanded','false');t.classList.remove('is-open');}});}var db=document.getElementById('resourcesBtn'),dw=document.getElementById('resourcesDropdown');if(db&&dw){db.addEventListener('click',function(e){e.stopPropagation();var o=dw.classList.toggle('dropdown-open');db.setAttribute('aria-expanded',String(o));});document.addEventListener('click',function(e){if(!dw.contains(e.target)){dw.classList.remove('dropdown-open');db.setAttribute('aria-expanded','false');}});}})();</script>
 
     <section class="hero" style="padding: 70px 0 30px;">
         <div class="container">
