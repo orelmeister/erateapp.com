@@ -439,19 +439,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             color: white;
         }
         
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 26px;
+            height: 19px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        .hamburger span { display: block; height: 3px; background: #1976d2; border-radius: 2px; }
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
+            .hero h1 { font-size: 2rem; }
+            .hamburger { display: flex; }
             .nav-links {
                 display: none;
+                position: fixed;
+                top: 0; right: 0;
+                height: 100vh; width: 260px;
+                background: #fff;
+                flex-direction: column; list-style: none;
+                padding: 70px 20px 20px;
+                box-shadow: -4px 0 24px rgba(25,118,210,0.15);
+                z-index: 150;
+                overflow-y: auto;
             }
-            
-            .discount-range {
-                flex-direction: column;
-                gap: 1rem;
-            }
+            .nav-links.nav-open { display: flex; }
+            .nav-links li { border-bottom: 1px solid #e3f2fd; padding: 4px 0; }
+            .discount-range { flex-direction: column; gap: 1rem; }
         }
     </style>
 
@@ -496,14 +513,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="index.html" class="nav-logo" style="display: flex; align-items: center;">
                 <img src="logo.PNG" alt="erateapp" style="height: 40px; width: auto;">
             </a>
-            <ul class="nav-links">
+            <button class="hamburger" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="schools.html" class="active">Schools</a></li>
                 <li><a href="libraries.html">Libraries</a></li>
                 <li><a href="free-audit.html">Free Audit</a></li>
                 <li><a href="services/e-rate-appeals.html">Appeals</a></li>
                 <li><a href="case-studies/">Case Studies</a></li>
-                <li><a href="https://skyrate.ai/tools/frn-tracker" target="_blank" rel="noopener">Track FRN Free</a></li>
+                <li><a href="https://skyrate.ai/tools/ben-tracker" target="_blank" rel="noopener">BEN Lookup</a></li>
                 <li><a href="blog/">Blog</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
@@ -750,5 +768,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     </script>
     <script src="/install-prompt.js" defer></script>
+    <script>(function(){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(!t||!n)return;t.addEventListener('click',function(){var o=n.classList.toggle('nav-open');t.setAttribute('aria-expanded',String(o));});document.addEventListener('click',function(e){if(!t.contains(e.target)&&!n.contains(e.target)){n.classList.remove('nav-open');t.setAttribute('aria-expanded','false');}});})();</script>
 </body>
 </html>

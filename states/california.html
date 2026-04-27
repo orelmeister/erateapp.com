@@ -93,7 +93,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .other-states a { color: var(--primary); text-decoration: none; margin: 0 0.4rem; font-weight: 500; }
         .footer { background: #0d47a1; color: #e3f2fd; padding: 40px 0; text-align: center; }
         .footer a { color: #e3f2fd; text-decoration: none; }
-        @media (max-width: 768px) { .article-header h1 { font-size: 2rem; } .nav-links { display: none; } }
+        .hamburger { display: none; flex-direction: column; justify-content: space-between; width: 26px; height: 19px; background: none; border: none; cursor: pointer; padding: 0; }
+        .hamburger span { display: block; height: 3px; background: #1976d2; border-radius: 2px; }
+        @media (max-width: 768px) { .article-header h1 { font-size: 2rem; } .hamburger { display: flex; } .nav-links { display: none; position: fixed; top: 0; right: 0; height: 100vh; width: 260px; background: #fff; flex-direction: column; list-style: none; padding: 70px 20px 20px; box-shadow: -4px 0 24px rgba(25,118,210,.15); z-index: 150; overflow-y: auto; } .nav-links.nav-open { display: flex; } .nav-links li { border-bottom: 1px solid #e3f2fd; padding: 4px 0; } }
     </style>
 
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
@@ -107,7 +109,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <nav class="nav"><div class="nav-content">
         <a href="../index.html" class="nav-logo" style="display:flex;align-items:center;gap:10px;"><img src="../logo.PNG" alt="erateapp" style="height:40px;width:auto;"></a>
-        <ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="../schools.html">Schools</a></li><li><a href="../libraries.html">Libraries</a></li><li><a href="../services/e-rate-appeals.html">Appeals</a></li><li><a href="../blog/">Blog</a></li><li><a href="../index.html#contact">Contact</a></li></ul>
+        <button class="hamburger" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="navLinks"><li><a href="../index.html">Home</a></li><li><a href="../schools.html">Schools</a></li><li><a href="../libraries.html">Libraries</a></li><li><a href="../services/e-rate-appeals.html">Appeals</a></li><li><a href="../blog/">Blog</a></li><li><a href="../index.html#contact">Contact</a></li></ul>
         <a href="https://app.erateapp.com" class="btn" style="background:white;color:#1976d2;border:2px solid #1976d2;">Login</a>
         <a href="/free-audit.html" class="btn btn-primary">Free Audit</a>
     </div></nav>
@@ -188,13 +191,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Most California applicants benefit from a free pre-submission audit before certifying Form 471. The two highest-leverage tools are:</p>
         <ul>
             <li><a href="/free-audit.html">erateapp Free E-Rate Audit</a> - 24-hour turnaround review of your filing strategy and risk exposure.</li>
-            <li><a href="https://skyrate.ai/tools/frn-tracker">SkyRate FRN Tracker</a> - free real-time monitoring of every FRN in your portfolio.</li>
+            <li><a href="https://skyrate.ai/tools/ben-tracker">SkyRate BEN Tracker</a> - free real-time lookup of any BEN in your portfolio.</li>
         </ul>
 
         <div class="callout callout-info">
-            <h4>Track Every California FRN Free</h4>
-            <p>The free <strong>SkyRate FRN Tracker</strong> watches USAC and emails you the moment any of your FRNs change status.</p>
-            <p style="margin-top:1rem;"><a href="https://skyrate.ai/tools/frn-tracker" style="color:var(--primary);font-weight:600;">Track Your FRN Free &rarr;</a></p>
+            <h4>Look Up Your California BEN</h4>
+            <p>The free <strong>SkyRate BEN Tracker</strong> gives you instant access to every BEN in your portfolio and its current funding status.</p>
+            <p style="margin-top:1rem;"><a href="https://skyrate.ai/tools/ben-tracker" style="color:var(--primary);font-weight:600;">Look Up Your BEN Free &rarr;</a></p>
         </div>
 
         <div class="cta-box">
@@ -205,7 +208,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="other-states">
             <strong>Other States:</strong>
-            <a href="texas.html">TX</a> | <a href="florida.html">FL</a> | <a href="new-york.html">NY</a> | <a href="illinois.html">IL</a> | <a href="pennsylvania.html">PA</a> | <a href="ohio.html">OH</a> | <a href="georgia.html">GA</a> | <a href="north-carolina.html">NC</a> | <a href="michigan.html">MI</a>
+            <a href="alabama.html">AL</a> | <a href="alaska.html">AK</a> | <a href="arizona.html">AZ</a> | <a href="arkansas.html">AR</a> | <a href="colorado.html">CO</a> | <a href="connecticut.html">CT</a> | <a href="delaware.html">DE</a> | <a href="florida.html">FL</a> | <a href="georgia.html">GA</a> | <a href="hawaii.html">HI</a> | <a href="idaho.html">ID</a> | <a href="illinois.html">IL</a> | <a href="indiana.html">IN</a> | <a href="iowa.html">IA</a> | <a href="kansas.html">KS</a> | <a href="kentucky.html">KY</a> | <a href="louisiana.html">LA</a> | <a href="maine.html">ME</a> | <a href="maryland.html">MD</a> | <a href="massachusetts.html">MA</a> | <a href="michigan.html">MI</a> | <a href="minnesota.html">MN</a> | <a href="mississippi.html">MS</a> | <a href="missouri.html">MO</a> | <a href="montana.html">MT</a> | <a href="nebraska.html">NE</a> | <a href="nevada.html">NV</a> | <a href="new-hampshire.html">NH</a> | <a href="new-jersey.html">NJ</a> | <a href="new-mexico.html">NM</a> | <a href="new-york.html">NY</a> | <a href="north-carolina.html">NC</a> | <a href="north-dakota.html">ND</a> | <a href="ohio.html">OH</a> | <a href="oklahoma.html">OK</a> | <a href="oregon.html">OR</a> | <a href="pennsylvania.html">PA</a> | <a href="rhode-island.html">RI</a> | <a href="south-carolina.html">SC</a> | <a href="south-dakota.html">SD</a> | <a href="tennessee.html">TN</a> | <a href="texas.html">TX</a> | <a href="utah.html">UT</a> | <a href="vermont.html">VT</a> | <a href="virginia.html">VA</a> | <a href="washington.html">WA</a> | <a href="west-virginia.html">WV</a> | <a href="wisconsin.html">WI</a> | <a href="wyoming.html">WY</a>
         </div>
 
     </div></article>
@@ -214,5 +217,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>&copy; 2026 SkyRate LLC. All rights reserved.</p>
         <p style="margin-top:0.5rem;"><a href="../index.html">Home</a> | <a href="../schools.html">Schools</a> | <a href="../libraries.html">Libraries</a> | <a href="../services/e-rate-appeals.html">Appeals</a> | <a href="../index.html#contact">Contact</a></p>
     </div></footer>
+<script>(function(){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(!t||!n)return;t.addEventListener('click',function(){var o=n.classList.toggle('nav-open');t.setAttribute('aria-expanded',String(o));});document.addEventListener('click',function(e){if(!t.contains(e.target)&&!n.contains(e.target)){n.classList.remove('nav-open');t.setAttribute('aria-expanded','false');}});})()</script>
 </body>
 </html>
