@@ -18,23 +18,23 @@
       gtag('config', 'G-58DW7WGBM7');
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free E-Rate Audit 2026 — Funding History &amp; Denial Analysis by BEN | SkyRate</title>
+    <title>Free E-Rate Audit 2026 — Funding History &amp; Denial Analysis by BEN | erateapp</title>
     <meta name="description" content="Free, instant E-Rate audit. Enter your BEN and get your full USAC funding history, denial analysis, and recovery insights. No signup, no credit card — pulls live from official USAC open data.">
     <meta name="keywords" content="free E-Rate audit, BEN lookup, USAC funding history, E-Rate denial analysis, FRN status, E-Rate funding check">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="SkyRate LLC">
+    <meta name="author" content="erateapp">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://erateapp.com/free-audit.html">
-    <meta property="og:title" content="Free E-Rate Audit 2026 — Funding History by BEN | SkyRate">
+    <meta property="og:title" content="Free E-Rate Audit 2026 — Funding History by BEN | erateapp">
     <meta property="og:description" content="Instant E-Rate funding audit. Enter your BEN, get your USAC funding history and denial analysis. Free, no signup.">
     <meta property="og:image" content="https://erateapp.com/img/og-image.png">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Free E-Rate Audit 2026 | SkyRate">
+    <meta name="twitter:title" content="Free E-Rate Audit 2026 | erateapp">
     <meta name="twitter:description" content="Instant E-Rate funding audit. Enter your BEN, get your USAC funding history and denial analysis. Free, no signup.">
 
     <link rel="canonical" href="https://erateapp.com/free-audit.html">
@@ -66,7 +66,7 @@
         },
         "provider": {
             "@type": "Organization",
-            "name": "SkyRate LLC",
+            "name": "erateapp", "legalName": "SkyRate LLC",
             "url": "https://erateapp.com",
             "telephone": "(855) 765-7291",
             "email": "admin@erateapp.com"
@@ -101,7 +101,7 @@
                 "name": "Is this audit really free?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. The audit is 100% free, runs entirely in your browser, and requires no account, no credit card, and no contract. We pull data directly from USAC's official open data APIs at opendata.usac.org. The optional follow-up consultation with a SkyRate E-Rate consultant is also free with no obligation."
+                    "text": "Yes. The audit is 100% free, runs entirely in your browser, and requires no account, no credit card, and no contract. We pull data directly from USAC's official open data APIs at opendata.usac.org. The optional follow-up consultation with an erateapp E-Rate consultant is also free with no obligation."
                 }
             },
             {
@@ -109,7 +109,7 @@
                 "name": "Where does the audit data come from?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "All funding data is pulled live from the official USAC Open Data Platform (opendata.usac.org), specifically the FRN Status and Form 471 datasets. This is the same data USAC publishes publicly under federal transparency requirements. SkyRate does not modify or store the data — your audit is generated in real time directly in your browser."
+                    "text": "All funding data is pulled live from the official USAC Open Data Platform (opendata.usac.org), specifically the FRN Status and Form 471 datasets. This is the same data USAC publishes publicly under federal transparency requirements. erateapp does not modify or store the data — your audit is generated in real time directly in your browser."
                 }
             },
             {
@@ -117,7 +117,7 @@
                 "name": "What should I do if my audit shows denials?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Most E-Rate denials can be appealed within 60 days of the FCDL. Common winnable denial reasons include cost-allocation disputes, competitive bidding documentation issues, and discount-rate calculation errors. SkyRate's appeals team has helped recover over $500M in denied funding. After your audit, request a free 30-minute strategy session and we'll review your specific denials and recovery options at no cost."
+                    "text": "Most E-Rate denials can be appealed within 60 days of the FCDL. Common winnable denial reasons include cost-allocation disputes, competitive bidding documentation issues, and discount-rate calculation errors. erateapp's appeals team has helped recover over $500M in denied funding. After your audit, request a free 30-minute strategy session and we'll review your specific denials and recovery options at no cost."
                 }
             }
         ]
@@ -306,6 +306,70 @@
     .skeleton-row { height: 16px; background: linear-gradient(90deg, #eceff1, #f5f7fa, #eceff1); background-size: 200% 100%; animation: skeleton 1.4s infinite; border-radius: 4px; margin: 8px 0; }
     @keyframes skeleton { 0%{background-position:200% 0;} 100%{background-position:-200% 0;} }
 
+    /* Urgent current-year denial banner */
+    .audit-urgent {
+        background: linear-gradient(135deg, #c62828 0%, #b71c1c 100%);
+        color: #fff;
+        border-radius: 14px;
+        padding: 24px 28px;
+        margin: 28px auto 0;
+        max-width: 760px;
+        box-shadow: 0 8px 28px rgba(198, 40, 40, 0.30);
+        border-left: 6px solid #ffeb3b;
+    }
+    .audit-urgent h3 { color: #fff; margin: 0 0 8px; font-family: 'Playfair Display', serif; font-size: 1.4rem; }
+    .audit-urgent p { color: #ffe0e0; margin: 0 0 14px; line-height: 1.6; }
+    .audit-urgent .urgent-cta {
+        display: inline-block;
+        background: #ffeb3b;
+        color: #b71c1c;
+        padding: 12px 22px;
+        font-weight: 700;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    .audit-urgent .urgent-cta:hover { background: #fdd835; }
+
+    /* Pre-fill captured lead notice */
+    .audit-prelead-note {
+        background: #e3f2fd;
+        border-left: 4px solid #1976d2;
+        padding: 14px 18px;
+        border-radius: 8px;
+        margin: 0 auto 18px;
+        max-width: 760px;
+        color: #0d47a1;
+        font-size: 0.95rem;
+    }
+
+    /* Cross-domain FRN tracker mini-card */
+    .frn-tracker-card {
+        background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
+        border: 1px solid #a5d6a7;
+        border-left: 4px solid #2e7d32;
+        padding: 18px 22px;
+        border-radius: 10px;
+        margin: 22px 0 8px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
+        justify-content: space-between;
+    }
+    .frn-tracker-card .ftc-text { flex: 1 1 280px; color: #1b5e20; font-size: 0.97rem; line-height: 1.5; }
+    .frn-tracker-card .ftc-text strong { color: #1b5e20; }
+    .frn-tracker-card a {
+        background: #2e7d32;
+        color: #fff;
+        padding: 10px 18px;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+    .frn-tracker-card a:hover { background: #1b5e20; }
+
     @media (max-width: 600px) {
         .audit-card, .lead-card { padding: 26px 20px; }
         .frn-table { font-size: 0.85rem; }
@@ -313,6 +377,7 @@
         .stat-tile .value { font-size: 1.4rem; }
     }
     </style>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -322,7 +387,7 @@
 
     <header>
         <nav class="container">
-            <div class="logo"><a href="/"><img src="logo.PNG" alt="SkyRate Logo"></a></div>
+            <div class="logo"><a href="/"><img src="logo.PNG" alt="erateapp Logo"></a></div>
             <div class="nav-links">
                 <a href="/#about">About</a>
                 <a href="/#services">Services</a>
@@ -330,6 +395,8 @@
                 <a href="libraries.html">Libraries</a>
                 <a href="free-audit.html">Free Audit</a>
                 <a href="services/e-rate-appeals.html">Appeals</a>
+                <a href="case-studies/">Case Studies</a>
+                <a href="https://skyrate.ai/tools/frn-tracker" target="_blank" rel="noopener">Track FRN Free</a>
                 <a href="blog/">Blog</a>
                 <a href="https://app.erateapp.com" class="nav-login-btn">Login</a>
                 <a href="/get-started.html" class="cta-button">Get Started</a>
@@ -358,11 +425,15 @@
                 <div id="audit-error" class="audit-error" style="display:none;"></div>
             </div>
 
+            <div id="audit-urgent" class="audit-urgent" style="display:none;"></div>
+
             <div id="audit-results" class="audit-results audit-card" style="display:none;margin-top:28px;"></div>
+
+            <div id="audit-prelead-note" class="audit-prelead-note" style="display:none;"></div>
 
             <div id="lead-section" class="lead-card" style="display:none;">
                 <h2>Get a Personalized Strategy Session — Free 30 Minutes</h2>
-                <p class="lead-sub">A SkyRate E-Rate expert will review your audit, walk you through every denial, and map out your funding recovery plan. No obligation, no contract.</p>
+                <p class="lead-sub">An erateapp E-Rate expert will review your audit, walk you through every denial, and map out your funding recovery plan. No obligation, no contract.</p>
                 <form id="lead-form" novalidate>
                     <!-- Honeypot -->
                     <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
@@ -396,11 +467,11 @@
             </div>
             <div class="faq-item">
                 <h3>Is this audit really free?</h3>
-                <p>Yes. The audit is 100% free, runs entirely in your browser, and requires no account, no credit card, and no contract. We pull data directly from <a href="https://opendata.usac.org" target="_blank" rel="noopener">USAC's official open data APIs</a>. The optional follow-up consultation with a SkyRate consultant is also free with no obligation.</p>
+                <p>Yes. The audit is 100% free, runs entirely in your browser, and requires no account, no credit card, and no contract. We pull data directly from <a href="https://opendata.usac.org" target="_blank" rel="noopener">USAC's official open data APIs</a>. The optional follow-up consultation with an erateapp consultant is also free with no obligation.</p>
             </div>
             <div class="faq-item">
                 <h3>Where does the audit data come from?</h3>
-                <p>All funding data is pulled live from the official <strong>USAC Open Data Platform</strong> (opendata.usac.org), specifically the FRN Status and Form 471 datasets. This is the same data USAC publishes publicly under federal transparency requirements. SkyRate does not modify or store the data — your audit is generated in real time directly in your browser.</p>
+                <p>All funding data is pulled live from the official <strong>USAC Open Data Platform</strong> (opendata.usac.org), specifically the FRN Status and Form 471 datasets. This is the same data USAC publishes publicly under federal transparency requirements. erateapp does not modify or store the data — your audit is generated in real time directly in your browser.</p>
             </div>
             <div class="faq-item">
                 <h3>What should I do if my audit shows denials?</h3>
@@ -413,7 +484,7 @@
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
                 <div>
-                    <h4 style="color: white; font-size: 1.3rem; margin-bottom: 20px; font-family: 'Playfair Display', serif;">SkyRate</h4>
+                    <h4 style="color: white; font-size: 1.3rem; margin-bottom: 20px; font-family: 'Playfair Display', serif;">erateapp</h4>
                     <p style="color: #8892a0; line-height: 1.8; font-size: 0.95rem;">Expert E-Rate consulting services helping K-12 schools, charter schools, and libraries maximize their technology funding through the federal E-Rate program.</p>
                     <div style="margin-top: 20px;">
                         <a href="mailto:admin@erateapp.com" style="color: #4fc3f7; text-decoration: none;">admin@erateapp.com</a><br>
@@ -449,7 +520,7 @@
             </div>
             <div style="border-top: 1px solid #1f3044; padding-top: 25px; text-align: center;">
                 <p style="color: #8892a0; font-size: 0.9rem;">&copy; 2026 SkyRate LLC. All rights reserved.</p>
-                <p style="color: #5a6a7a; font-size: 0.8rem; margin-top: 10px;">SkyRate is not affiliated with USAC or the FCC. We are an independent consulting firm specializing in E-Rate applications. Audit data is sourced from the public USAC Open Data Platform.</p>
+                <p style="color: #5a6a7a; font-size: 0.8rem; margin-top: 10px;">erateapp is not affiliated with USAC or the FCC. We are an independent consulting firm specializing in E-Rate applications. Audit data is sourced from the public USAC Open Data Platform.</p>
             </div>
         </div>
     </footer>
@@ -468,13 +539,40 @@
         var auditBtn    = document.getElementById('audit-btn');
         var auditError  = document.getElementById('audit-error');
         var resultsEl   = document.getElementById('audit-results');
+        var urgentEl    = document.getElementById('audit-urgent');
+        var preleadEl   = document.getElementById('audit-prelead-note');
         var leadSection = document.getElementById('lead-section');
         var leadForm    = document.getElementById('lead-form');
         var leadBtn     = document.getElementById('lead-btn');
         var leadStatus  = document.getElementById('lead-status');
 
-        // Holds context so the lead form can attach BEN + summary
-        var auditContext = { ben: null, summary: null, entity: null };
+        // Current calendar year (used for current-year denial detection)
+        var CURRENT_YEAR = new Date().getFullYear();
+
+        // Holds context so the lead form can attach BEN + summary + denial info
+        var auditContext = {
+            ben: null,
+            summary: null,
+            entity: null,
+            email: null,
+            urgent: false,
+            urgentFRN: null,
+            urgentStatus: null,
+            currentYearDeniedCount: 0,
+            autoLeadId: null
+        };
+
+        // dataLayer / GTM helper
+        function pushDL(eventName, payload) {
+            try {
+                window.dataLayer = window.dataLayer || [];
+                var obj = { event: eventName };
+                if (payload && typeof payload === 'object') {
+                    for (var k in payload) if (payload.hasOwnProperty(k)) obj[k] = payload[k];
+                }
+                window.dataLayer.push(obj);
+            } catch (e) {}
+        }
 
         function escapeHtml(s) {
             if (s === null || s === undefined) return '';
@@ -550,15 +648,35 @@
                 });
         }
 
+        // Scan a record for any *email* field and return first non-empty value.
+        function extractEmail(rec) {
+            if (!rec || typeof rec !== 'object') return '';
+            for (var k in rec) {
+                if (!rec.hasOwnProperty(k)) continue;
+                if (k.toLowerCase().indexOf('email') < 0) continue;
+                var v = rec[k];
+                if (typeof v === 'string' && v.indexOf('@') > 0) {
+                    return v.trim();
+                }
+            }
+            return '';
+        }
+
         function buildAuditFromRecords(ben, lineItems) {
-            var entityName = '', state = '', city = '';
+            var entityName = '', state = '', city = '', auditedEmail = '';
             // Aggregate line items into per-FRN summary
             var frnMap = {};
+            // Track current-year denials/cancellations
+            var currentYearDenials = [];
 
             (lineItems || []).forEach(function(r) {
                 if (!entityName) entityName = getStr(r, ['organization_name', 'ros_entity_name']);
                 if (!state)      state      = getStr(r, ['org_state', 'ros_physical_state']);
                 if (!city)       city       = getStr(r, ['org_city', 'ros_physical_city']);
+                if (!auditedEmail) {
+                    var e = extractEmail(r);
+                    if (e) auditedEmail = e;
+                }
 
                 var frn = getStr(r, ['funding_request_number']);
                 if (!frn) return;
@@ -581,6 +699,16 @@
                 if (newStatus && classifyStatus(newStatus) === 'funded') {
                     frnMap[frn].status = newStatus;
                 }
+
+                // Current-year denial/cancel tracking
+                var fy = parseInt(getStr(r, ['funding_year']) || '0', 10);
+                var statusName = getStr(r, ['form_471_frn_status_name']) || '';
+                var statusLower = statusName.toLowerCase();
+                var isDeniedOrCancelled = statusLower.indexOf('denied') >= 0
+                    || statusLower.indexOf('cancel') >= 0;
+                if (fy === CURRENT_YEAR && isDeniedOrCancelled) {
+                    currentYearDenials.push({ frn: frn, status: statusName, year: fy });
+                }
             });
 
             var rows = [];
@@ -602,15 +730,63 @@
             });
 
             return {
-                ben:           ben,
-                entityName:    entityName || '',
-                state:         state || '',
-                city:          city || '',
-                totalFRNs:     rows.length,
-                totalCommitted: totalCommitted,
-                counts:        counts,
-                rows:          rows
+                ben:                ben,
+                entityName:         entityName || '',
+                state:              state || '',
+                city:               city || '',
+                auditedEmail:       auditedEmail || '',
+                totalFRNs:          rows.length,
+                totalCommitted:     totalCommitted,
+                counts:             counts,
+                rows:               rows,
+                currentYearDenials: currentYearDenials
             };
+        }
+
+        // Auto-capture lead from extracted USAC email (fire-and-forget)
+        function autoCaptureLead(audit) {
+            if (!audit || !audit.auditedEmail) return;
+            var summaryNote = 'Auto-captured from BEN audit. Found ' + audit.totalFRNs +
+                ' FRNs, ' + fmtMoney(audit.totalCommitted) + ' committed' +
+                ', ' + (audit.counts.denied || 0) + ' denied/cancelled' +
+                (audit.currentYearDenials && audit.currentYearDenials.length
+                    ? '. URGENT: ' + audit.currentYearDenials.length + ' FY' + CURRENT_YEAR + ' denial(s) detected.'
+                    : '.');
+            var payload = {
+                name:         audit.entityName || 'Audit visitor',
+                email:        audit.auditedEmail,
+                role:         'applicant',
+                organization: audit.entityName || null,
+                ben:          audit.ben || null,
+                source:       'erateapp-free-audit-auto',
+                notes:        summaryNote,
+                _hp:          ''
+            };
+            try {
+                fetch(LEAD_API, {
+                    method: 'POST',
+                    mode: 'cors',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(payload)
+                }).then(function(resp) {
+                    if (!resp.ok) return null;
+                    return resp.json().catch(function() { return {}; });
+                }).then(function(data) {
+                    if (data && data.lead_id) auditContext.autoLeadId = data.lead_id;
+                    pushDL('audit_auto_lead_sent', {
+                        ben: audit.ben,
+                        lead_id: (data && data.lead_id) || null,
+                        email_domain: audit.auditedEmail.split('@')[1] || ''
+                    });
+                    // Show the soft note above the lead form
+                    if (preleadEl) {
+                        preleadEl.style.display = 'block';
+                        preleadEl.innerHTML = '<strong>We\u2019ve already noted your visit.</strong> ' +
+                            'We saw a contact email tied to this BEN in USAC public data and saved it for follow-up. ' +
+                            'Fill in the form below if you\u2019d like a personal call or to use a different email.';
+                    }
+                }).catch(function() { /* swallow */ });
+            } catch (e) { /* swallow */ }
         }
 
         function buildInsights(audit) {
@@ -621,7 +797,7 @@
             var totalPending = c.pending || 0;
 
             if (audit.totalFRNs === 0) {
-                ins.push('No FRNs found in USAC public data for BEN ' + audit.ben + '. This can happen for new applicants or if the BEN is incorrect — a SkyRate consultant can verify and help you start fresh.');
+                ins.push('No FRNs found in USAC public data for BEN ' + audit.ben + '. This can happen for new applicants or if the BEN is incorrect — an erateapp consultant can verify and help you start fresh.');
                 return ins;
             }
 
@@ -630,7 +806,7 @@
             if (totalDenied > 0) {
                 ins.push('<strong>' + totalDenied + ' denied or cancelled FRN' + (totalDenied === 1 ? '' : 's') + '</strong> identified. Most E-Rate denials can be appealed within 60 days of the FCDL — common winnable reasons include cost-allocation disputes, competitive-bidding documentation, and discount-rate calculation errors.');
             } else {
-                ins.push('No denials detected in the available history — strong filing track record. SkyRate can help you maximize your Category 2 budget and lock in next-year funding earlier.');
+                ins.push('No denials detected in the available history — strong filing track record. erateapp can help you maximize your Category 2 budget and lock in next-year funding earlier.');
             }
 
             if (totalPending > 0) {
@@ -656,10 +832,46 @@
             return parts.join(' | ');
         }
 
+        function renderUrgentBanner(audit) {
+            if (!audit.currentYearDenials || audit.currentYearDenials.length === 0) {
+                urgentEl.style.display = 'none';
+                return;
+            }
+            var n = audit.currentYearDenials.length;
+            var first = audit.currentYearDenials[0];
+            var statusLabel = (first.status || 'Denied').toLowerCase().indexOf('cancel') >= 0
+                ? 'Cancelled' : 'Denied';
+            var ctaUrl = '/get-started.html?source=audit-urgent'
+                + '&ben=' + encodeURIComponent(audit.ben || '')
+                + '&fy=' + CURRENT_YEAR
+                + '&status=' + encodeURIComponent(statusLabel.toLowerCase());
+            var html = '<h3>\u26A0 Urgent: You have an FY' + CURRENT_YEAR +
+                ' application that was ' + escapeHtml(statusLabel) +
+                (n > 1 ? ' (and ' + (n - 1) + ' other' + (n - 1 === 1 ? '' : 's') + ')' : '') + '.</h3>' +
+                '<p>Appeals must typically be filed within <strong>60 days of the FCDL</strong>. ' +
+                'erateapp can help you recover this funding \u2014 book a free strategy call now.</p>' +
+                '<a href="' + ctaUrl + '" class="urgent-cta">Book my urgent appeal call \u2192</a>';
+            urgentEl.innerHTML = html;
+            urgentEl.style.display = 'block';
+            pushDL('audit_urgent_shown', {
+                ben: audit.ben,
+                fy: CURRENT_YEAR,
+                count: n,
+                status: statusLabel.toLowerCase()
+            });
+        }
+
         function renderAudit(audit) {
             auditContext.ben = audit.ben;
             auditContext.entity = audit.entityName;
+            auditContext.email = audit.auditedEmail || null;
             auditContext.summary = buildSummaryString(audit);
+            auditContext.currentYearDeniedCount = (audit.currentYearDenials || []).length;
+            if (auditContext.currentYearDeniedCount > 0) {
+                auditContext.urgent = true;
+                auditContext.urgentFRN = audit.currentYearDenials[0].frn || null;
+                auditContext.urgentStatus = (audit.currentYearDenials[0].status || '').toLowerCase().indexOf('cancel') >= 0 ? 'cancelled' : 'denied';
+            }
 
             var html = '';
             html += '<h2>Audit Results for BEN ' + escapeHtml(audit.ben) + '</h2>';
@@ -700,11 +912,20 @@
                 });
                 html += '</tbody></table>';
                 if (audit.rows.length > 5) {
-                    html += '<p style="color:#607d8b;font-size:0.9rem;margin-top:-12px;margin-bottom:18px;">Showing 5 of ' + audit.rows.length + ' FRNs. A SkyRate consultant can review the full history with you.</p>';
+                    html += '<p style="color:#607d8b;font-size:0.9rem;margin-top:-12px;margin-bottom:18px;">Showing 5 of ' + audit.rows.length + ' FRNs. An erateapp consultant can review the full history with you.</p>';
                 }
             } else {
                 html += '<div class="audit-error" style="display:block;background:#fff8e1;color:#b53d00;border-color:#ffe082;">No funding requests found in USAC open data for this BEN. This is normal for brand-new applicants or if the BEN is mistyped. Either way, we can help — request a free strategy session below.</div>';
             }
+
+            // Cross-domain FRN tracker mini-card (skyrate.ai)
+            html += '<div class="frn-tracker-card">' +
+                '<div class="ftc-text"><strong>Want continuous monitoring?</strong> ' +
+                'Get free real-time alerts the moment any of your FRNs change status. ' +
+                'Try our FRN Tracker tool.</div>' +
+                '<a href="https://skyrate.ai/tools/frn-tracker" target="_blank" rel="noopener" ' +
+                'onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'cta_frn_tracker_click\',source:\'free-audit\'});">' +
+                'Open FRN Tracker \u2192</a></div>';
 
             html += '<p style="color:#607d8b;font-size:0.85rem;margin-top:18px;">Data source: <a href="https://opendata.usac.org" target="_blank" rel="noopener">USAC Open Data Platform</a>. Audit generated in your browser at the time of search.</p>';
 
@@ -724,6 +945,8 @@
         auditForm.addEventListener('submit', function(e) {
             e.preventDefault();
             hideAuditError();
+            urgentEl.style.display = 'none';
+            preleadEl.style.display = 'none';
 
             var ben = (benInput.value || '').replace(/\D/g, '');
             if (!ben || ben.length < 6 || ben.length > 9) {
@@ -734,25 +957,45 @@
 
             auditBtn.disabled = true;
             var origLabel = auditBtn.textContent;
-            auditBtn.textContent = 'Running audit…';
+            auditBtn.textContent = 'Running audit\u2026';
             showSkeleton();
+
+            pushDL('audit_submit', { ben: ben, ben_length: ben.length });
 
             var frnUrl = FRN_STATUS_API + '?billed_entity_number=' + encodeURIComponent(ben) + '&$limit=500&$order=funding_year DESC';
 
             fetchUSAC(frnUrl).then(function(records) {
                 var audit = buildAuditFromRecords(ben, records || []);
+                // Render urgent banner FIRST (above results) if applicable
+                renderUrgentBanner(audit);
                 renderAudit(audit);
+                pushDL('audit_complete', {
+                    ben: ben,
+                    frn_count: audit.totalFRNs,
+                    denied_count: audit.counts.denied || 0,
+                    current_year_denied: (audit.currentYearDenials || []).length > 0,
+                    current_year_denied_count: (audit.currentYearDenials || []).length,
+                    has_email: !!audit.auditedEmail
+                });
+                // Auto-capture lead if email was extracted
+                autoCaptureLead(audit);
             }).catch(function(err) {
                 // Total failure — still show lead capture
                 resultsEl.style.display = 'none';
-                showAuditError('We could not reach the USAC data API just now. You can still book a free strategy session below — a consultant will pull your funding history manually. (Error: ' + escapeHtml(err.message || 'unknown') + ')');
+                urgentEl.style.display = 'none';
+                showAuditError('We could not reach the USAC data API just now. You can still book a free strategy session below \u2014 a consultant will pull your funding history manually. (Error: ' + escapeHtml(err.message || 'unknown') + ')');
                 auditContext.ben = ben;
                 auditContext.summary = 'BEN ' + ben + ' | USAC API unreachable at audit time';
                 leadSection.style.display = 'block';
+                pushDL('audit_complete', { ben: ben, frn_count: 0, denied_count: 0, current_year_denied: false, error: true });
             }).then(function() {
                 auditBtn.disabled = false;
                 auditBtn.textContent = origLabel;
-                try { window.scrollTo({ top: resultsEl.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'smooth' }); } catch(e) {}
+                // Scroll to urgent banner if shown, else results
+                try {
+                    var target = urgentEl && urgentEl.style.display !== 'none' ? urgentEl : resultsEl;
+                    window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'smooth' });
+                } catch(e) {}
             });
 
             try {
@@ -784,7 +1027,7 @@
 
             var hp = (document.getElementById('_hp').value || '').trim();
             if (hp.length > 0) {
-                showLeadStatus('success', '<strong>Thanks!</strong> A SkyRate consultant will be in touch.');
+                showLeadStatus('success', '<strong>Thanks!</strong> An erateapp consultant will be in touch.');
                 leadForm.style.display = 'none';
                 return;
             }
@@ -797,6 +1040,16 @@
             if (!email || !EMAIL_RE.test(email)) { showLeadStatus('error', 'Please enter a valid work email.'); return; }
 
             var utm = getUTM();
+            var notes = auditContext.summary || ('Free audit lead from erateapp.com/free-audit.html');
+            if (auditContext.urgent) {
+                notes = 'Urgent: FY' + CURRENT_YEAR + ' ' + (auditContext.urgentStatus || 'denial')
+                    + '/cancel found for BEN ' + (auditContext.ben || '?')
+                    + (auditContext.urgentFRN ? ', FRN ' + auditContext.urgentFRN : '')
+                    + '. ' + notes;
+            }
+            if (auditContext.autoLeadId) {
+                notes = '[follow-up to auto-lead ' + auditContext.autoLeadId + '] ' + notes;
+            }
             var payload = {
                 name:        name,
                 email:       email,
@@ -808,13 +1061,19 @@
                 utm_source:  utm.utm_source,
                 utm_medium:  utm.utm_medium,
                 utm_campaign: utm.utm_campaign,
-                notes:       auditContext.summary || ('Free audit lead from erateapp.com/free-audit.html'),
+                notes:       notes,
                 _hp:         hp
             };
 
+            pushDL('audit_lead_submit', {
+                ben: auditContext.ben,
+                urgent: !!auditContext.urgent,
+                has_phone: !!phone
+            });
+
             leadBtn.disabled = true;
             var origLeadLabel = leadBtn.textContent;
-            leadBtn.textContent = 'Sending…';
+            leadBtn.textContent = 'Sending\u2026';
 
             fetch(LEAD_API, {
                 method: 'POST',
@@ -828,7 +1087,7 @@
             })
             .then(function(data) {
                 showLeadStatus('success',
-                    '<strong>You\'re booked in!</strong> A SkyRate E-Rate consultant will email you within 24 hours.<br><br>' +
+                    '<strong>You\'re booked in!</strong> An erateapp E-Rate consultant will email you within 24 hours.<br><br>' +
                     'Want to grab a time right now? <a href="' + CALENDLY_URL + '" target="_blank" rel="noopener" style="color:#1565c0;font-weight:600;">Pick a 30-minute slot &rarr;</a>'
                 );
                 leadForm.style.display = 'none';
@@ -844,6 +1103,20 @@
                 leadBtn.textContent = origLeadLabel;
             });
         });
+
+        // Generic CTA click tracking for any link to /get-started.html
+        document.addEventListener('click', function(ev) {
+            var a = ev.target && ev.target.closest ? ev.target.closest('a') : null;
+            if (!a || !a.getAttribute) return;
+            var href = a.getAttribute('href') || '';
+            if (href.indexOf('/get-started.html') >= 0 || href === 'get-started.html') {
+                pushDL('cta_get_started_click', {
+                    href: href,
+                    page: 'free-audit',
+                    urgent: !!auditContext.urgent
+                });
+            }
+        }, true);
     })();
     </script>
 </body>
