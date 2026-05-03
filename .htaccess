@@ -1,0 +1,11 @@
+# Force non-www and HTTPS
+RewriteEngine On
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.erateapp\.com [NC]
+RewriteRule ^(.*)$ https://erateapp.com/$1 [R=301,L]
+
+# Redirect HTTP to HTTPS (non-www)
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^erateapp\.com [NC]
+RewriteRule ^(.*)$ https://erateapp.com/$1 [R=301,L]
