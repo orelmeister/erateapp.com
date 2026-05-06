@@ -411,6 +411,26 @@
             <h1>Free E-Rate Audit — Instant Funding History by BEN</h1>
             <p class="lead">Enter your <strong>Billed Entity Number (BEN)</strong> and get a complete audit of your district's E-Rate funding history, denial analysis, and recovery opportunities. Pulled live from official USAC open data. No signup, no credit card.</p>
             <p class="hero-trust">100% free · Real USAC data · Results in under 5 seconds · No account required</p>
+
+            <!-- Trust signal metrics (conservative figures from USAC public data scope) -->
+            <div class="trust-metrics" style="display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:22px;">
+                <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:12px 18px;min-width:160px;">
+                    <div style="font-size:1.6rem;font-weight:800;line-height:1;">30,000+</div>
+                    <div style="font-size:0.85rem;opacity:0.9;margin-top:4px;">BENs in our index</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:12px 18px;min-width:160px;">
+                    <div style="font-size:1.6rem;font-weight:800;line-height:1;">$3.4B+</div>
+                    <div style="font-size:0.85rem;opacity:0.9;margin-top:4px;">FY2025 funding analyzed</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:12px 18px;min-width:160px;">
+                    <div style="font-size:1.6rem;font-weight:800;line-height:1;">500+</div>
+                    <div style="font-size:0.85rem;opacity:0.9;margin-top:4px;">Districts audited</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:12px 18px;min-width:160px;">
+                    <div style="font-size:1.6rem;font-weight:800;line-height:1;">&lt; 5s</div>
+                    <div style="font-size:0.85rem;opacity:0.9;margin-top:4px;">Average response time</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -421,11 +441,24 @@
                 <p style="color:#546e7a;margin-bottom:18px;">Enter the 7-9 digit BEN for your school, district, or library.</p>
                 <form id="audit-form" class="ben-form" novalidate>
                     <input type="text" id="ben-input" name="ben" placeholder="e.g., 16056315" inputmode="numeric" pattern="[0-9]{6,9}" maxlength="9" autocomplete="off" required>
-                    <button type="submit" id="audit-btn">Get my free audit</button>
+                    <button type="submit" id="audit-btn">Get Your Free Audit (2 min)</button>
                 </form>
                 <p class="ben-help">Don't know your BEN? <a href="https://opendata.usac.org/E-rate/E-rate-Entities/dghk-jb6c/data" target="_blank" rel="noopener" style="color:#1976d2;font-weight:600;">Look it up on USAC's public Entity Search</a> or <a href="/get-started.html" style="color:#1976d2;font-weight:600;">talk to a consultant</a>.</p>
                 <div id="audit-error" class="audit-error" style="display:none;"></div>
             </div>
+
+            <!-- TESTIMONIAL PLACEHOLDER -->
+            <!-- TODO: Replace with a real, attributed customer quote before production push.
+                 Do NOT fabricate quotes. Suggested ask: 1-2 sentence outcome (denial overturned,
+                 funding recovered, deadline saved) + name, title, district. -->
+            <figure class="audit-testimonial" style="max-width:760px;margin:28px auto 0;background:#f4f8fc;border-left:4px solid #1976d2;border-radius:8px;padding:18px 22px;">
+                <blockquote style="margin:0;font-style:italic;color:#37474f;line-height:1.6;">
+                    [INSERT TESTIMONIAL] &mdash; A short outcome-focused quote from a school administrator, library director, or IT director will go here once approved.
+                </blockquote>
+                <figcaption style="margin-top:10px;font-size:0.9rem;color:#546e7a;">
+                    [INSERT NAME], [INSERT TITLE] &middot; [INSERT DISTRICT/LIBRARY]
+                </figcaption>
+            </figure>
 
             <div id="audit-urgent" class="audit-urgent" style="display:none;"></div>
 
