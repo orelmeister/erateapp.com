@@ -1464,3 +1464,15 @@ html {
     0%, 100% { transform: translate(0, 0) rotate(0deg); }
     50% { transform: translate(5%, 5%) rotate(180deg); }
 }
+
+/* Mobile hero: ensure primary + consulting CTA are visible above the fold on small screens */
+@media (max-width: 600px) {
+    .hero { padding: 24px 0 20px 0 !important; margin-top: 70px !important; }
+    .hero h1 { font-size: 1.6rem !important; line-height: 1.2 !important; margin-bottom: 12px !important; }
+    .hero p { font-size: 0.95rem !important; line-height: 1.45 !important; margin-bottom: 16px !important; }
+    .hero .hero-image { margin-top: 18px !important; }
+    .hero .hero-image img { max-width: 240px; }
+    .hero .cta-button { padding: 12px 22px !important; font-size: 0.95rem !important; }
+    .hero-cta-group { gap: 10px !important; }
+    .hero-trust { font-size: 0.85rem !important; margin-top: 14px !important; }
+}
