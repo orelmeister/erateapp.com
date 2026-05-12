@@ -1,0 +1,10 @@
+# Defense-in-depth: prevent indexing of any draft files in this folder.
+# Drafts here are committed to the repo for review/preview but must NOT
+# appear in Google or any search engine until they are moved out of _drafts/.
+
+<IfModule mod_headers.c>
+    Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>
+
+# Block directory listing
+Options -Indexes
