@@ -47,7 +47,7 @@
     <!-- Service Pages (High Priority - Money Pages) -->
     <url>
         <loc>https://erateapp.com/services/e-rate-consulting.html</loc>
-        <lastmod>2026-05-06</lastmod>
+        <lastmod>2026-05-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -83,6 +83,12 @@
     </url>
     
     <!-- Guide Pages (TOFU Content) -->
+    <url>
+        <loc>https://erateapp.com/guides/e-rate-application-timeline-2026.html</loc>
+        <lastmod>2026-05-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
     <url>
         <loc>https://erateapp.com/guides/what-is-e-rate.html</loc>
         <lastmod>2026-01-14</lastmod>

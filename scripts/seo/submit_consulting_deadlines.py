@@ -36,23 +36,29 @@ def main() -> int:
     success = 0
     failed = 0
     for url in URLS:
-        try:
-            resp = service.urlNotifications().publish(
-                body={"url": url, "type": "URL_UPDATED"}
-            ).execute()
-            ts = (
-                resp.get("urlNotificationMetadata", {})
-                .get("latestUpdate", {})
-                .get("notifyTime", "n/a")
-            )
-            print(f"[OK]   {url}")
-            print(f"       notifyTime: {ts}")
-            success += 1
-        except Exception as exc:    # noqa: BLE001
-            print(f"[FAIL] {url}")
-            print(f"       Error: {exc}")
-            failed += 1
-        time.sleep(1)
+        for attempt in range(2):
+            try:
+                resp = service.urlNotifications().publish(
+                    body={"url": url, "type": "URL_UPDATED"}
+                ).execute()
+                ts = (
+                    resp.get("urlNotificationMetadata", {})
+                    .get("latestUpdate", {})
+                    .get("notifyTime", "n/a")
+                )
+                print(f"[OK]   {url}")
+                print(f"       notifyTime: {ts}")
+                success += 1
+                break
+            except KeyboardInterrupt:
+                print(f"[RETRY] {url}  (interrupted, retrying)")
+                continue
+            except Exception as exc:    # noqa: BLE001
+                print(f"[FAIL] {url}")
+                print(f"       Error: {exc}")
+                failed += 1
+                break
+        time.sleep(0.5)
 
     print(f"\nDone. {success} submitted, {failed} failed.")
     return 0 if failed == 0 else 1
