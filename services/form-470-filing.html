@@ -296,6 +296,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>The Form 470 initiates your E-Rate competitive bidding process. Get it wrong, and your entire application can be denied. Our experts ensure your Form 470 is posted correctly, meets all requirements, and attracts qualified vendors.</p>
             <div>
                 <a href="/get-started.html" class="btn btn-primary">Get Form 470 Help →</a>
+                <a href="/free-audit.html" class="btn btn-secondary" style="margin-left: 1rem;">Run a Free Audit</a>
                 <a href="../index.html#contact" class="btn btn-secondary" style="margin-left: 1rem;">Free Consultation</a>
             </div>
         </div>
@@ -426,6 +427,73 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="../schools.html" class="related-link">E-Rate for Schools →</a>
                 <a href="../libraries.html" class="related-link">E-Rate for Libraries →</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Embedded Lead Capture (bottom) -->
+    <section class="section">
+        <div class="container" style="max-width:760px;">
+            <section class="lead-capture" id="lc-section-f470" style="background:linear-gradient(135deg,#e3f2fd,#ffffff);border:1px solid #d6e4f5;border-radius:14px;padding:32px 28px;box-shadow:0 6px 20px rgba(13,71,161,0.08);">
+                <style>
+                    .lead-capture h3{font-size:1.4rem;color:#0d47a1;margin:0 0 8px;}
+                    .lead-capture p.lc-sub{color:#37474f;margin:0 0 18px;line-height:1.6;}
+                    .lc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+                    .lc-field{display:flex;flex-direction:column;}
+                    .lc-field.full{grid-column:1 / -1;}
+                    .lc-field label{font-weight:600;font-size:0.9rem;color:#1f2937;margin-bottom:5px;}
+                    .lc-field input,.lc-field select{padding:11px 13px;border:1px solid #cdd9e5;border-radius:8px;font-family:inherit;font-size:1rem;width:100%;background:#fff;color:#1f2937;}
+                    .lc-field input:focus,.lc-field select:focus{outline:none;border-color:#1976d2;box-shadow:0 0 0 3px rgba(25,118,210,0.15);}
+                    .lc-submit{background:#1976d2;color:#fff;border:none;padding:13px 26px;border-radius:8px;font-weight:700;font-size:1.05rem;cursor:pointer;width:100%;transition:background .2s;}
+                    .lc-submit:hover{background:#0d47a1;}
+                    .lc-submit:disabled{opacity:.65;cursor:not-allowed;}
+                    .lc-status{display:none;padding:15px 18px;border-radius:8px;margin-top:14px;font-weight:500;line-height:1.5;}
+                    .lc-privacy{font-size:0.82rem;color:#6b7280;margin:12px 0 0;text-align:center;}
+                    @media(max-width:600px){.lc-grid{grid-template-columns:1fr;}}
+                </style>
+                <h3>Get Help Filing Your Form 470</h3>
+                <p class="lc-sub">Tell us about your school or library and an erateapp E-Rate expert will help you post a compliant Form 470 that attracts qualified bids. No obligation. Or call <a href="tel:855-765-7291" style="color:#1976d2;font-weight:600;">(855) 765-7291</a>.</p>
+                <form id="lc-form-f470" novalidate>
+                    <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true"><label for="lc_hp_f470">Leave empty</label><input type="text" id="lc_hp_f470" name="_hp" tabindex="-1" autocomplete="off"></div>
+                    <div class="lc-grid">
+                        <div class="lc-field"><label for="lc_name_f470">Full Name *</label><input type="text" id="lc_name_f470" name="name" required autocomplete="name"></div>
+                        <div class="lc-field"><label for="lc_email_f470">Work Email *</label><input type="email" id="lc_email_f470" name="email" required autocomplete="email"></div>
+                        <div class="lc-field"><label for="lc_org_f470">Organization / Entity *</label><input type="text" id="lc_org_f470" name="organization" required autocomplete="organization"></div>
+                        <div class="lc-field"><label for="lc_role_f470">Your Role *</label><select id="lc_role_f470" name="role" required><option value="">-- Select --</option><option value="school_district_admin">School / District Administrator</option><option value="charter_school_leader">Charter School Leader</option><option value="library_director">Library Director</option><option value="consortium_leader">Consortium Leader</option><option value="consultant">Consultant</option><option value="vendor">Vendor</option><option value="other">Other</option></select></div>
+                        <div class="lc-field full"><label for="lc_phone_f470">Phone <span style="font-weight:400;color:#6b7280;">(optional, for fastest response)</span></label><input type="tel" id="lc_phone_f470" name="phone" autocomplete="tel"></div>
+                    </div>
+                    <div style="margin-top:16px;"><button type="submit" class="lc-submit" id="lc_btn_f470">Get Form 470 Help</button></div>
+                    <div class="lc-status" id="lc_status_f470"></div>
+                    <p class="lc-privacy">Your information is 100% secure and never shared. No spam, no obligation.</p>
+                </form>
+                <script>
+                (function(){
+                    var API_URL='https://skyrate.ai/api/v1/leads/capture';
+                    var SOURCE='erateapp.com/form-470-filing';
+                    var form=document.getElementById('lc-form-f470');
+                    var btn=document.getElementById('lc_btn_f470');
+                    var status=document.getElementById('lc_status_f470');
+                    var EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    function getUTM(){var p=new URLSearchParams(window.location.search);return{utm_source:p.get('utm_source')||null,utm_medium:p.get('utm_medium')||null,utm_campaign:p.get('utm_campaign')||null};}
+                    function showError(m){status.style.display='block';status.style.background='#ffebee';status.style.color='#c62828';status.style.border='1px solid #ffcdd2';status.innerHTML=m;}
+                    function showSuccess(){status.style.display='block';status.style.background='#e8f5e9';status.style.color='#2e7d32';status.style.border='1px solid #c8e6c9';status.innerHTML='<strong>Thanks!</strong> An erateapp E-Rate expert will contact you within 24 hours. Want a head start? <a href="/free-audit.html" style="color:#1565c0;font-weight:600;">Run a free BEN audit &rarr;</a>';try{form.style.display='none';}catch(e){}}
+                    form.addEventListener('submit',function(e){
+                        e.preventDefault();status.style.display='none';
+                        var hp=(document.getElementById('lc_hp_f470').value||'').trim();
+                        if(hp.length>0){showSuccess();return;}
+                        var name=form.name.value.trim(),email=form.email.value.trim(),organization=form.organization.value.trim(),role=form.role.value,phone=form.phone.value.trim();
+                        if(!name||!email||!organization||!role){showError('Please fill in your name, email, organization, and role.');return;}
+                        if(!EMAIL_RE.test(email)){showError('Please enter a valid email address.');return;}
+                        var utm=getUTM();
+                        var payload={name:name,email:email,phone:phone||null,role:role,organization:organization,student_count:null,funding_year_interest:[],ben:null,source:SOURCE,utm_source:utm.utm_source,utm_medium:utm.utm_medium,utm_campaign:utm.utm_campaign,notes:null,_hp:hp};
+                        btn.disabled=true;btn.textContent='Sending...';
+                        fetch(API_URL,{method:'POST',mode:'cors',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
+                        .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json().catch(function(){return{};});})
+                        .then(function(){try{if(window.dataLayer)window.dataLayer.push({event:'lead_submitted',source:SOURCE});}catch(e){}showSuccess();})
+                        .catch(function(err){console.warn('[lead-capture] failed:',err);showError('Something went wrong. Please call <a href="tel:855-765-7291" style="color:#c62828;font-weight:700;">(855) 765-7291</a> or email <a href="mailto:admin@erateapp.com" style="color:#c62828;font-weight:700;">admin@erateapp.com</a>.');btn.disabled=false;btn.textContent='Get Form 470 Help';});
+                    });
+                })();
+                </script>
+            </section>
         </div>
     </section>
 

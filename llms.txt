@@ -1,0 +1,41 @@
+# erateapp
+
+> erateapp is an E-Rate consulting service that helps K-12 schools, charter schools, and public libraries secure and maximize federal E-Rate technology funding through the USAC E-Rate program. 25+ years of experience, a 98% funding approval rate, and $500M+ in funding secured for 500+ schools and libraries. Operated by SkyRate LLC. Toll-free: (855) 765-7291. Email: admin@erateapp.com.
+
+erateapp is an independent consulting firm and is not affiliated with USAC or the FCC. Services cover the full E-Rate lifecycle: Form 470 competitive bidding, Form 471 applications, PIA review support, appeals, compliance monitoring, and invoicing.
+
+## Key Pages
+
+- [Home](https://erateapp.com/index.html): Overview of erateapp's E-Rate consulting services for schools and libraries.
+- [Get Started / Free Consultation](https://erateapp.com/get-started.html): Request a free, no-obligation E-Rate consultation. Response within 24 hours.
+- [Free Audit](https://erateapp.com/free-audit.html): Run an instant free audit by BEN (Billed Entity Number) to see your full FRN funding history and denial breakdown from USAC public data. No signup required.
+- [E-Rate Deadlines 2026](https://erateapp.com/guides/e-rate-deadlines-2026.html): Complete FY2026 calendar of Form 470, Form 471, PIA, and invoice deadlines.
+- [What is E-Rate?](https://erateapp.com/guides/what-is-e-rate.html): Plain-language explanation of the federal E-Rate program.
+
+## Services
+
+- [Form 470 Filing](https://erateapp.com/services/form-470-filing.html): Competitive bidding posting and the 28-day waiting period.
+- [Form 471 Filing](https://erateapp.com/services/form-471-filing.html): Funding request application preparation and certification.
+- [PIA Review Support](https://erateapp.com/services/pia-review-support.html): Help responding to USAC Program Integrity Assurance reviews.
+- [E-Rate Appeals](https://erateapp.com/services/e-rate-appeals.html): Appeal and waiver requests to recover denied funding.
+- [E-Rate Consulting](https://erateapp.com/services/e-rate-consulting.html): Full-service E-Rate program management.
+- [Compliance Monitoring](https://erateapp.com/services/e-rate-compliance.html): Ongoing E-Rate compliance and deadline tracking.
+
+## Who We Serve
+
+- [Public Schools](https://erateapp.com/schools.html)
+- [Charter Schools](https://erateapp.com/charter-schools.html)
+- [Public Libraries](https://erateapp.com/libraries.html)
+
+## Resources
+
+- [Blog](https://erateapp.com/blog/): E-Rate guides, strategies, and program updates.
+- [Increase Your E-Rate Discount](https://erateapp.com/blog/increase-e-rate-discount-percentage.html): Strategies to qualify for a higher discount rate (20%-90%).
+- [How to Win an E-Rate Appeal](https://erateapp.com/blog/how-to-win-e-rate-appeal.html): Strategy and process guide for appealing E-Rate denials.
+- [10 Common E-Rate Mistakes](https://erateapp.com/blog/10-common-e-rate-mistakes.html): Errors that lead to denials and how to avoid them.
+
+## Contact
+
+- Phone (toll-free): (855) 765-7291
+- Email: admin@erateapp.com
+- Company: SkyRate LLC, 30 N Gould St Ste N, Sheridan, WY 82801, USA
