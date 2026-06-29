@@ -383,6 +383,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </ul>
             </div>
 
+            <!-- Embedded Lead Capture Magnet (top) -->
+            <section class="lead-capture" id="lc-section-wie" style="background:linear-gradient(135deg,#e3f2fd,#ffffff);border:1px solid #d6e4f5;border-radius:14px;padding:30px 26px;margin:1.5rem 0 2rem;box-shadow:0 6px 20px rgba(13,71,161,0.08);">
+                <style>
+                    .lead-capture h3{font-size:1.4rem;color:#0d47a1;margin:0 0 8px;border:none;padding:0;}
+                    .lead-capture p.lc-sub{color:#37474f;margin:0 0 18px;line-height:1.6;}
+                    .lc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+                    .lc-field{display:flex;flex-direction:column;}
+                    .lc-field.full{grid-column:1 / -1;}
+                    .lc-field label{font-weight:600;font-size:0.9rem;color:#1f2937;margin-bottom:5px;}
+                    .lc-field input,.lc-field select{padding:11px 13px;border:1px solid #cdd9e5;border-radius:8px;font-family:inherit;font-size:1rem;width:100%;background:#fff;color:#1f2937;}
+                    .lc-field input:focus,.lc-field select:focus{outline:none;border-color:#1976d2;box-shadow:0 0 0 3px rgba(25,118,210,0.15);}
+                    .lc-submit{background:#1976d2;color:#fff;border:none;padding:13px 26px;border-radius:8px;font-weight:700;font-size:1.05rem;cursor:pointer;width:100%;transition:background .2s;}
+                    .lc-submit:hover{background:#0d47a1;}
+                    .lc-submit:disabled{opacity:.65;cursor:not-allowed;}
+                    .lc-status{display:none;padding:15px 18px;border-radius:8px;margin-top:14px;font-weight:500;line-height:1.5;}
+                    .lc-privacy{font-size:0.82rem;color:#6b7280;margin:12px 0 0;text-align:center;}
+                    @media(max-width:600px){.lc-grid{grid-template-columns:1fr;}}
+                </style>
+                <div style="display:inline-block;background:#0d47a1;color:#fff;font-weight:700;font-size:0.8rem;letter-spacing:.04em;padding:5px 12px;border-radius:20px;margin-bottom:10px;">FREE PDF DOWNLOAD</div>
+                <h3>Free: get the 2026 E-Rate Deadlines Checklist (PDF)</h3>
+                <p class="lc-sub">New to E-Rate? Grab a printable one-page checklist with every FY2026 date: Form 470 &amp; 471 windows, the 28-day rule, PIA response, and invoice deadlines. Enter your details and we'll unlock the download. Prefer to talk now? Call <a href="tel:855-765-7291" style="color:#1976d2;font-weight:600;">(855) 765-7291</a>.</p>
+                <form id="lc-form-wie" novalidate>
+                    <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true"><label for="lc_hp_wie">Leave empty</label><input type="text" id="lc_hp_wie" name="_hp" tabindex="-1" autocomplete="off"></div>
+                    <div class="lc-grid">
+                        <div class="lc-field"><label for="lc_name_wie">Full Name *</label><input type="text" id="lc_name_wie" name="name" required autocomplete="name"></div>
+                        <div class="lc-field"><label for="lc_email_wie">Work Email *</label><input type="email" id="lc_email_wie" name="email" required autocomplete="email"></div>
+                        <div class="lc-field"><label for="lc_org_wie">Organization / Entity *</label><input type="text" id="lc_org_wie" name="organization" required autocomplete="organization"></div>
+                        <div class="lc-field"><label for="lc_role_wie">Your Role *</label><select id="lc_role_wie" name="role" required><option value="">-- Select --</option><option value="school_district_admin">School / District Administrator</option><option value="charter_school_leader">Charter School Leader</option><option value="library_director">Library Director</option><option value="consortium_leader">Consortium Leader</option><option value="consultant">Consultant</option><option value="vendor">Vendor</option><option value="other">Other</option></select></div>
+                        <div class="lc-field full"><label for="lc_phone_wie">Phone <span style="font-weight:400;color:#6b7280;">(optional, for fastest response)</span></label><input type="tel" id="lc_phone_wie" name="phone" autocomplete="tel"></div>
+                    </div>
+                    <div style="margin-top:16px;"><button type="submit" class="lc-submit" id="lc_btn_wie">Send Me the Free Checklist</button></div>
+                    <div class="lc-status" id="lc_status_wie"></div>
+                    <p class="lc-privacy">Your information is 100% secure and never shared. No spam, no obligation.</p>
+                </form>
+                <script>
+                (function(){
+                    var API_URL='https://skyrate.ai/api/v1/leads/capture';
+                    var SOURCE='deadlines-checklist-magnet';
+                    var DOWNLOAD_URL='/downloads/2026-deadlines-checklist.pdf';
+                    var form=document.getElementById('lc-form-wie');
+                    var btn=document.getElementById('lc_btn_wie');
+                    var status=document.getElementById('lc_status_wie');
+                    var EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    function getUTM(){var p=new URLSearchParams(window.location.search);return{utm_source:p.get('utm_source')||null,utm_medium:p.get('utm_medium')||null,utm_campaign:p.get('utm_campaign')||null};}
+                    function showError(m){status.style.display='block';status.style.background='#ffebee';status.style.color='#c62828';status.style.border='1px solid #ffcdd2';status.innerHTML=m;}
+                    function showSuccess(){status.style.display='block';status.style.background='#e8f5e9';status.style.color='#2e7d32';status.style.border='1px solid #c8e6c9';status.innerHTML='<strong>Thanks! Your checklist is ready.</strong><br><a href="'+DOWNLOAD_URL+'" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;background:#1976d2;color:#fff;padding:11px 22px;border-radius:8px;font-weight:700;text-decoration:none;">Download the 2026 Deadlines Checklist (PDF)</a><br><span style="display:block;margin-top:10px;">An erateapp E-Rate expert will also reach out within 24 hours.</span>';try{form.style.display="none";}catch(e){}try{window.open(DOWNLOAD_URL,"_blank","noopener");}catch(e){}}
+                    form.addEventListener('submit',function(e){
+                        e.preventDefault();status.style.display='none';
+                        var hp=(document.getElementById('lc_hp_wie').value||'').trim();
+                        if(hp.length>0){showSuccess();return;}
+                        var name=form.name.value.trim(),email=form.email.value.trim(),organization=form.organization.value.trim(),role=form.role.value,phone=form.phone.value.trim();
+                        if(!name||!email||!organization||!role){showError('Please fill in your name, email, organization, and role.');return;}
+                        if(!EMAIL_RE.test(email)){showError('Please enter a valid email address.');return;}
+                        var utm=getUTM();
+                        var payload={name:name,email:email,phone:phone||null,role:role,organization:organization,student_count:null,funding_year_interest:[],ben:null,source:SOURCE,utm_source:utm.utm_source,utm_medium:utm.utm_medium,utm_campaign:utm.utm_campaign,notes:null,_hp:hp};
+                        btn.disabled=true;btn.textContent='Sending...';
+                        fetch(API_URL,{method:'POST',mode:'cors',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
+                        .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json().catch(function(){return{};});})
+                        .then(function(){try{if(window.dataLayer)window.dataLayer.push({event:'lead_submitted',source:SOURCE});}catch(e){}showSuccess();})
+                        .catch(function(err){console.warn('[lead-capture] failed:',err);showError('Something went wrong. Please call <a href="tel:855-765-7291" style="color:#c62828;font-weight:700;">(855) 765-7291</a> or email <a href="mailto:admin@erateapp.com" style="color:#c62828;font-weight:700;">admin@erateapp.com</a>.');btn.disabled=false;btn.textContent='Send Me the Free Checklist';});
+                    });
+                })();
+                </script>
+            </section>
+
             <h2 id="overview">E-Rate Program Overview</h2>
             <p>The <strong>E-Rate program</strong> (officially the Schools and Libraries Universal Service Support Program) is a federal initiative that provides <strong>discounts of 20% to 90%</strong> on eligible telecommunications, internet access, and internal connections for schools and libraries across the United States.</p>
             
