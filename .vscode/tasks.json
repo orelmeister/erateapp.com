@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Fix SEO in erateapp.com",
+			"type": "shell",
+			"command": "python _fix_seo2.py",
+			"isBackground": false,
+			"group": "build"
+		}
+	]
+}
