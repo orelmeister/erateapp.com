@@ -537,4 +537,24 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+
+    <!-- Legal / Support -->
+    <url>
+        <loc>https://erateapp.com/support.html</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://erateapp.com/privacy.html</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://erateapp.com/terms.html</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
 </urlset>
