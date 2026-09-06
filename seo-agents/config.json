@@ -2,7 +2,7 @@
   "orchestrator": {
     "name": "SEO_Orchestrator",
     "description": "Main controller agent that coordinates all SEO activities across sub-agents",
-    "model": "gpt-4",
+    "model": "kimi-k2-0905-preview",
     "temperature": 0.7,
     "tools": [
       "mcp_microsoft_pla_browser_navigate",
@@ -20,7 +20,7 @@
     "seo_specialist": {
       "name": "SEO_Specialist",
       "description": "Technical SEO expert for keyword research, on-page optimization, meta tags",
-      "model": "gpt-4",
+      "model": "kimi-k2-0905-preview",
       "temperature": 0.5,
       "expertise": [
         "keyword_research",
@@ -34,7 +34,7 @@
     "content_strategist": {
       "name": "Content_Strategist",
       "description": "Blog and content expert for topic clusters, content calendars, TOFU/MOFU/BOFU",
-      "model": "gpt-4",
+      "model": "kimi-k2-0905-preview",
       "temperature": 0.7,
       "expertise": [
         "topic_cluster_development",
@@ -47,7 +47,7 @@
     "link_architect": {
       "name": "Link_Architect",
       "description": "Internal linking specialist for silo structures and anchor text optimization",
-      "model": "gpt-4",
+      "model": "kimi-k2-0905-preview",
       "temperature": 0.5,
       "expertise": [
         "silo_structure_planning",
@@ -60,7 +60,7 @@
     "blog_expert": {
       "name": "Blog_Expert",
       "description": "Blog content creation, optimization, and internal link placement specialist",
-      "model": "gpt-4",
+      "model": "kimi-k2-0905-preview",
       "temperature": 0.7,
       "expertise": [
         "blog_post_planning",
