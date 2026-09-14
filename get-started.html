@@ -418,6 +418,7 @@
             })
             .then(function() {
                 try { if (window.dataLayer) window.dataLayer.push({ event: 'lead_submitted', source: 'get-started' }); } catch(e) {}
+                try { if (typeof gtag === 'function') gtag('event', 'lead_submitted', { source: 'get-started', page_location: location.href }); } catch(e) {}
                 showSuccess();
             })
             .catch(function(err) {
@@ -427,6 +428,17 @@
                 btn.textContent = 'Get My Free Consultation';
             });
         });
+    })();
+    </script>
+
+    <script>
+    (function(){
+        document.addEventListener('click', function(e){
+            var a = e.target && e.target.closest ? e.target.closest('a[href*="calendar.app.google"]') : null;
+            if(!a) return;
+            try { if (window.dataLayer) window.dataLayer.push({ event: 'book_call_click', source: 'get-started' }); } catch(_){}
+            try { if (typeof gtag === 'function') gtag('event', 'book_call_click', { source: 'get-started', page_location: location.href }); } catch(_){}
+        }, true);
     })();
     </script>
 </body>

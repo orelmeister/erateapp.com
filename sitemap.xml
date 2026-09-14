@@ -3,7 +3,7 @@
     <!-- Homepage -->
     <url>
         <loc>https://erateapp.com/</loc>
-        <lastmod>2026-09-03</lastmod>
+        <lastmod>2026-09-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -11,7 +11,7 @@
     <!-- Lead Capture / Get Started -->
     <url>
         <loc>https://erateapp.com/get-started.html</loc>
-        <lastmod>2026-04-26</lastmod>
+        <lastmod>2026-09-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -47,7 +47,7 @@
     <!-- Service Pages (High Priority - Money Pages) -->
     <url>
         <loc>https://erateapp.com/services/e-rate-consulting.html</loc>
-        <lastmod>2026-05-12</lastmod>
+        <lastmod>2026-09-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -59,7 +59,7 @@
     </url>
     <url>
         <loc>https://erateapp.com/services/form-470-filing.html</loc>
-        <lastmod>2026-08-27</lastmod>
+        <lastmod>2026-09-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -91,7 +91,7 @@
     </url>
     <url>
         <loc>https://erateapp.com/guides/what-is-e-rate.html</loc>
-        <lastmod>2026-06-28</lastmod>
+        <lastmod>2026-09-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -155,7 +155,7 @@
     </url>
     <url>
         <loc>https://erateapp.com/blog/how-to-win-e-rate-appeal.html</loc>
-        <lastmod>2026-06-28</lastmod>
+        <lastmod>2026-09-14</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -167,7 +167,7 @@
     </url>
     <url>
         <loc>https://erateapp.com/blog/increase-e-rate-discount-percentage.html</loc>
-        <lastmod>2026-06-28</lastmod>
+        <lastmod>2026-09-14</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
