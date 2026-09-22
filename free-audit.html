@@ -69,7 +69,7 @@
         },
         "provider": {
             "@type": "Organization",
-            "name": "erateapp", "legalName": "SkyRate LLC",
+            "name": "erateapp",
             "logo": "https://erateapp.com/img/logo.png",
             "url": "https://erateapp.com",
             "telephone": "(855) 765-7291",
@@ -408,7 +408,6 @@
                         <a href="services/e-rate-appeals.html" role="menuitem">Appeals</a>
                     </div>
                 </div>
-                <a href="https://skyrate.ai/tools/ben-tracker" target="_blank" rel="noopener">BEN Lookup</a>
                 <a href="https://app.erateapp.com" class="nav-login-btn">Login</a>
                 <a href="/get-started.html" class="cta-button">Get Started</a>
             </div>
@@ -566,7 +565,7 @@
                 </div>
             </div>
             <div style="border-top: 1px solid #1f3044; padding-top: 25px; text-align: center;">
-                <p style="color: #8892a0; font-size: 0.9rem;">&copy; 2026 SkyRate LLC. All rights reserved.</p>
+                <p style="color: #8892a0; font-size: 0.9rem;">&copy; 2026 erateapp. All rights reserved.</p>
                 <p style="color: #5a6a7a; font-size: 0.8rem; margin-top: 10px;">erateapp is not affiliated with USAC or the FCC. We are an independent consulting firm specializing in E-Rate applications. Audit data is sourced from the public USAC Open Data Platform.</p>
             </div>
         </div>
@@ -965,15 +964,6 @@
                 html += '<div class="audit-error" style="display:block;background:#fff8e1;color:#b53d00;border-color:#ffe082;">No funding requests found in USAC open data for this BEN. This is normal for brand-new applicants or if the BEN is mistyped. Either way, we can help — request a free strategy session below.</div>';
             }
 
-            // Cross-domain FRN tracker mini-card (skyrate.ai)
-            html += '<div class="frn-tracker-card">' +
-                '<div class="ftc-text"><strong>Want continuous monitoring?</strong> ' +
-                'Get free real-time alerts the moment any of your FRNs change status. ' +
-                'Try our FRN Tracker tool.</div>' +
-                '<a href="https://skyrate.ai/tools/ben-tracker" target="_blank" rel="noopener" ' +
-                'onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:\'cta_frn_tracker_click\',source:\'free-audit\'});">' +
-                'Open FRN Tracker \u2192</a></div>';
-
             html += '<p style="color:#607d8b;font-size:0.85rem;margin-top:18px;">Data source: <a href="https://opendata.usac.org" target="_blank" rel="noopener">USAC Open Data Platform</a>. Audit generated in your browser at the time of search.</p>';
 
             resultsEl.innerHTML = html;
@@ -1062,7 +1052,7 @@
         function showLeadFallback() {
             showLeadStatus('error',
                 '<strong>We couldn\'t submit the form right now.</strong><br>' +
-                'Email us at <a href="mailto:hello@skyrate.ai" style="color:#1565c0;font-weight:600;">hello@skyrate.ai</a> ' +
+                'Email us at <a href="mailto:hello@erateapp.com" style="color:#1565c0;font-weight:600;">hello@erateapp.com</a> ' +
                 'or call <a href="tel:855-765-7291" style="color:#1565c0;font-weight:600;">(855) 765-7291</a> ' +
                 'and reference BEN ' + escapeHtml(auditContext.ben || 'N/A') + '.'
             );
